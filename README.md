@@ -11,11 +11,11 @@
 
 The only step to use this extension is moving your cursor to Element-UI tag or prop.
 
-[![gkk7IH.gif](https://z3.ax1x.com/2021/04/29/gkk7IH.gif)](https://imgtu.com/i/gkk7IH)
+[![gkk7IH.gif](https://gitee.com/tu6ge/formulate_el_ui/raw/master/%E5%8A%A8%E7%94%BB1.gif)](https://imgtu.com/i/gkk7IH)
 
 ### Autocomplete
 
-[![gkkTde.gif](https://z3.ax1x.com/2021/04/29/gkkTde.gif)](https://imgtu.com/i/gkkTde)
+[![gkkTde.gif](https://gitee.com/tu6ge/formulate_el_ui/raw/master/%E5%8A%A8%E7%94%BB2.gif)](https://imgtu.com/i/gkkTde)
 
 ## Support
 
