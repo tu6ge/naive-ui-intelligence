@@ -3,7 +3,7 @@
 </p>
 
 
-> Naive UI is a VS Code extension for Naive-UI.
+> Naive UI Intelligence is a VS Code extension for Naive-UI.
 
 - Support 97 components of Naive-ui
 - Support all props of components
