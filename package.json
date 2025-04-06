@@ -1,6 +1,6 @@
 {
-  "name": "element-ui-helper",
-  "displayName": "element-ui-helper",
+  "name": "naive-ui",
+  "displayName": "naive-ui",
   "version": "1.4.1",
   "description": "Document Hover Tips And Autocomplete Tools.",
   "author": {
@@ -29,12 +29,12 @@
   "contributes": {
     "configuration": {
       "type": "object",
-      "title": "Element UI Helper Config",
+      "title": "Naive UI Config",
       "properties": {
         "element-ui-helper.language": {
           "type": "string",
           "default": "zh-CN",
-          "description": "Document Language of Element UI",
+          "description": "Document Language of Navie UI",
           "enum": [
             "zh-CN",
             "en-US"

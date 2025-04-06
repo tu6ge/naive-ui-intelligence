@@ -273,7 +273,7 @@ export class ElementCompletionItemProvider implements CompletionItemProvider<Com
       completionItems.push({
         label: `${key}`,
         sortText: `0${key}`,
-        detail: 'ElementUI Tag',
+        detail: 'NaiveUI Tag',
         kind: CompletionItemKind.Value,
         insertText: new SnippetString().appendText(`${key}`).appendTabstop().appendText('>').appendTabstop().appendText(`</${key}>`),
         range
@@ -298,7 +298,7 @@ export class ElementCompletionItemProvider implements CompletionItemProvider<Com
     let tag: TagObject | undefined = this.getPreTag()
     let attr = this.getPreAttr()
 
-    if (!tag || !/^[E|e]l/.test(tag.text || '')) {
+    if (!tag || !/^n/.test(tag.text || '')) {
       // 如果不是element的标签(E|el开头) 则返回 null 表示没有hover
       return null
     } else if (this.isAttrValueStart(tag, attr)) {

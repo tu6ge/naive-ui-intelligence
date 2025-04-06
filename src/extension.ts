@@ -5,7 +5,7 @@ import { ElementHoverProvier } from './hover-tips/element-hover-provider'
 import { ElementCompletionItemProvider } from './completion/element-completion-item-povider'
 
 export function activate(context: ExtensionContext): void {
-  console.log('extension "element-ui-helper" is now active!')
+  console.log('extension "naive-ui" is now active!')
 
   // 注册 completion 提示
   context.subscriptions.push(
