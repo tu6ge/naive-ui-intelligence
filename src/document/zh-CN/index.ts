@@ -1,161 +1,197 @@
-import elalert from './el-alert'
-import elaside from './el-aside'
-import elautocomplete from './el-autocomplete'
-import elavatar from './el-avatar'
-import elbacktop from './el-backtop'
-import elbadge from './el-badge'
-import elbreadcrumbitem from './el-breadcrumb-item'
-import elbreadcrumb from './el-breadcrumb'
-import elbutton from './el-button'
-import elcard from './el-card'
-import elcarouselitem from './el-carousel-item'
-import elcarousel from './el-carousel'
-import elcascaderpanel from './el-cascader-panel'
-import elcascader from './el-cascader'
-import elcheckboxbutton from './el-checkbox-button'
-import elcheckboxgroup from './el-checkbox-group'
-import elcheckbox from './el-checkbox'
-import elcol from './el-col'
-import elcollapseitem from './el-collapse-item'
-import elcollapse from './el-collapse'
-import elcolorpicker from './el-color-picker'
-import elcontainer from './el-container'
-import eldatepicker from './el-date-picker'
-import eldatetimepicker from './el-datetime-picker'
-import eldialog from './el-dialog'
-import eldivider from './el-divider'
-import eldrawer from './el-drawer'
-import eldropdownmenuitem from './el-dropdown-menu-item'
-import eldropdown from './el-dropdown'
-import elfooter from './el-footer'
-import elformitem from './el-form-item'
-import elform from './el-form'
-import elheader from './el-header'
-import elimage from './el-image'
-import elinfinitescroll from './el-infinite-scroll'
-import elinputnumber from './el-input-number'
-import elinput from './el-input'
-import ellink from './el-link'
-import elmenuitemgroup from './el-menu-item-group'
-import elmenuitem from './el-menu-item'
-import elmenu from './el-menu'
-import eloptiongroup from './el-option-group'
-import eloption from './el-option'
-import elpageheader from './el-page-header'
-import elpagination from './el-pagination'
-import elpopconfirm from './el-popconfirm'
-import elpopover from './el-popover'
-import elprogress from './el-progress'
-import elradiobutton from './el-radio-button'
-import elradiogroup from './el-radio-group'
-import elradio from './el-radio'
-import elrate from './el-rate'
-import elrow from './el-row'
-import elselect from './el-select'
-import elslider from './el-slider'
-import elstep from './el-step'
-import elsteps from './el-steps'
-import elsubmenu from './el-submenu'
-import elswitch from './el-switch'
-import eltabpane from './el-tab-pane'
-import eltablecolumn from './el-table-column'
-import eltable from './el-table'
-import eltabs from './el-tabs'
-import eltag from './el-tag'
-import eltimepicker from './el-time-picker'
-import eltimeselect from './el-time-select'
-import eltimelineitem from './el-timeline-item'
-import eltimeline from './el-timeline'
-import eltooltip from './el-tooltip'
-import eltransfer from './el-transfer'
-import eltree from './el-tree'
-import elupload from './el-upload'
-import calendar from './el-calendar'
-import descriptionsItem from './el-descriptions-item'
-import descriptions from './el-descriptions'
-import empty from './el-empty'
-import result from './el-result'
-import skeletonItem from './el-skeleton-item'
-import skeleton from './el-skeleton'
+import nalert from './n-alert'
+import nanchor from './n-anchor'
+import nautocomplete from './n-auto-complete'
+import navatar from './n-avatar'
+import navatargroup from './n-avatar-group'
+import nbacktop from './n-back-top'
+import nbadge from './n-badge'
+import nbreadcrumb from './n-breadcrumb'
+import nbutton from './n-button'
+import nbuttongroup from './n-button-group'
+import ncalendar from './n-calendar'
+import ncard from './n-card'
+import ncarousel from './n-carousel'
+import ncascader from './n-cascader'
+import ncheckbox from './n-checkbox'
+import ncode from './n-code'
+import ncollapsetransition from './n-collapse-transition'
+import ncollapse from './n-collapse'
+import ncolorpicker from './n-color-picker'
+import nconfigprovider from './n-config-provider'
+import ncountdown from './n-countdown'
+import ndatatable from './n-data-table'
+import ndatepicker from './n-date-picker'
+import ndesciptions from './n-descriptions'
+import ndialog from './n-dialog'
+import ndivider from './n-divider'
+import ndrawer from './n-drawer'
+import ndrawercontent from './n-drawer-content'
+import ndropdown from './n-dropdown'
+import ndynamicinput from './n-dynamic-input'
+import ndynamictags from './n-dynamic-tags'
+import nelement from './n-element'
+import nellipsis from './n-ellipsis'
+import nempty from './n-empty'
+import nequation from './n-equation'
+import nflex from './n-flex'
+import nfloatbuttongroup from './n-float-button-group'
+import nfloatbutton from './n-float-button'
+import nform from './n-form'
+import nformitem from './n-form-item'
+import ngradienttext from './n-gradient-text'
+import ngrid from './n-grid'
+import nhighlight from './n-highlight'
+import niconwrapper from './n-icon-wrapper'
+import nicon from './n-icon'
+import nimage from './n-image'
+import ninfinitescroll from './n-infinite-scroll'
+import ninput from './n-input'
+import ninputnumber from './n-input-number'
+import nlayout from './n-layout'
+import nlayoutcontent from './n-layout-content'
+import nlayoutfooter from './n-layout-footer'
+import nlayoutheader from './n-layout-header'
+import nlayoutsider from './n-layout-sider'
+import nlist from './n-list'
+import nloadingbarprovider from './n-loading-bar-provider'
+import nlog from './n-log'
+import nmarquee from './n-marquee'
+import nmention from './n-mention'
+import nmenu from './n-menu'
+import nmessageprovider from './n-message-provider'
+import nmodalprovider from './n-modal-provider'
+import nnotificationprovider from './n-notification-provider'
+import nnumberanimation from './n-number-animation'
+import npageheader from './n-page-header'
+import npagination from './n-pagination'
+import npopconfirm from './n-popconfirm'
+import npopover from './n-popover'
+import npopselect from './n-popselect'
+import nprogress from './n-progress'
+import nqrcode from './n-qr-code'
+import nradio from './n-radio'
+import nrate from './n-rate'
+import nresult from './n-result'
+import nscrollbar from './n-scrollbar'
+import nselect from './n-select'
+import nskeleton from './n-skeleton'
+import nslider from './n-slider'
+import nspace from './n-space'
+import nspin from './n-spin'
+import nsplit from './n-split'
+import nstatistic from './n-statistic'
+import nsteps from './n-steps'
+import nswitch from './n-switch'
+import ntable from './n-table'
+import ntabs from './n-tabs'
+import ntag from './n-tag'
+import nthing from './n-thing'
+import ntimepicker from './n-time-picker'
+import ntime from './n-time'
+import ntimeline from './n-timeline'
+import ntransfer from './n-transfer'
+import ntree from './n-tree'
+import ntreeselect from './n-tree-select'
+import ntypography from './n-typography'
+import nupload from './n-upload'
+import nwatermark from './n-watermark'
 
 export default {
-  'n-alert': elalert,
-  'el-aside': elaside,
-  'el-autocomplete': elautocomplete,
-  'el-avatar': elavatar,
-  'el-backtop': elbacktop,
-  'el-badge': elbadge,
-  'el-breadcrumb-item': elbreadcrumbitem,
-  'el-breadcrumb': elbreadcrumb,
-  'el-button': elbutton,
-  'el-card': elcard,
-  'el-carousel-item': elcarouselitem,
-  'el-carousel': elcarousel,
-  'el-cascader-panel': elcascaderpanel,
-  'el-cascader': elcascader,
-  'el-checkbox-button': elcheckboxbutton,
-  'el-checkbox-group': elcheckboxgroup,
-  'el-checkbox': elcheckbox,
-  'el-col': elcol,
-  'el-collapse-item': elcollapseitem,
-  'el-collapse': elcollapse,
-  'el-color-picker': elcolorpicker,
-  'el-container': elcontainer,
-  'el-date-picker': eldatepicker,
-  'el-datetime-picker': eldatetimepicker,
-  'el-dialog': eldialog,
-  'el-divider': eldivider,
-  'el-drawer': eldrawer,
-  'el-dropdown-menu-item': eldropdownmenuitem,
-  'el-dropdown': eldropdown,
-  'el-footer': elfooter,
-  'el-form-item': elformitem,
-  'el-form': elform,
-  'el-header': elheader,
-  'el-image': elimage,
-  'el-infinite-scroll': elinfinitescroll,
-  'el-input-number': elinputnumber,
-  'el-input': elinput,
-  'el-link': ellink,
-  'el-menu-item-group': elmenuitemgroup,
-  'el-menu-item': elmenuitem,
-  'el-menu': elmenu,
-  'el-option-group': eloptiongroup,
-  'el-option': eloption,
-  'el-page-header': elpageheader,
-  'el-pagination': elpagination,
-  'el-popconfirm': elpopconfirm,
-  'el-popover': elpopover,
-  'el-progress': elprogress,
-  'el-radio-button': elradiobutton,
-  'el-radio-group': elradiogroup,
-  'el-radio': elradio,
-  'el-rate': elrate,
-  'el-row': elrow,
-  'el-select': elselect,
-  'el-slider': elslider,
-  'el-step': elstep,
-  'el-steps': elsteps,
-  'el-submenu': elsubmenu,
-  'el-switch': elswitch,
-  'el-tab-pane': eltabpane,
-  'el-table-column': eltablecolumn,
-  'el-table': eltable,
-  'el-tabs': eltabs,
-  'el-tag': eltag,
-  'el-time-picker': eltimepicker,
-  'el-time-select': eltimeselect,
-  'el-timeline-item': eltimelineitem,
-  'el-timeline': eltimeline,
-  'el-tooltip': eltooltip,
-  'el-transfer': eltransfer,
-  'el-tree': eltree,
-  'el-upload': elupload,
-  'el-calendar': calendar,
-  'el-descriptions-item': descriptionsItem,
-  'el-descriptions': descriptions,
-  'el-empty': empty,
-  'el-result': result,
-  'el-skeleton-item': skeletonItem,
-  'el-skeleton': skeleton
+  'n-alert': nalert,
+  'n-anchor': nanchor,
+  'n-auto-complete': nautocomplete,
+  'n-avatar': navatar,
+  'n-avatar-group': navatargroup,
+  'n-back-top': nbacktop,
+  'n-badge': nbadge,
+  'n-breadcrumb': nbreadcrumb,
+  'n-button': nbutton,
+  'n-button-group': nbuttongroup,
+  'n-calendar': ncalendar,
+  'n-card': ncard,
+  'n-carousel': ncarousel,
+  'n-cascader': ncascader,
+  'n-checkbox': ncheckbox,
+  'n-code': ncode,
+  'n-collapse-transition': ncollapsetransition,
+  'n-collapse': ncollapse,
+  'n-color-picker': ncolorpicker,
+  'n-config-provider': nconfigprovider,
+  'n-countdown': ncountdown,
+  'n-data-table': ndatatable,
+  'n-date-picker': ndatepicker,
+  'n-descriptions': ndesciptions,
+  'n-dialog': ndialog,
+  'n-divider': ndivider,
+  'n-drawer': ndrawer,
+  'n-drawer-content': ndrawercontent,
+  'n-dropdown': ndropdown,
+  'n-dynamic-input': ndynamicinput,
+  'n-dynamic-tags': ndynamictags,
+  'n-element': nelement,
+  'n-ellipsis': nellipsis,
+  'n-empty': nempty,
+  'n-equation': nequation,
+  'n-flex': nflex,
+  'n-float-button-group': nfloatbuttongroup,
+  'n-float-button': nfloatbutton,
+  'n-form': nform,
+  'n-form-item': nformitem,
+  'n-gradient-text': ngradienttext,
+  'n-grid': ngrid,
+  'n-highlight': nhighlight,
+  'n-icon-wrapper': niconwrapper,
+  'n-icon': nicon,
+  'n-image': nimage,
+  'n-infinite-scroll': ninfinitescroll,
+  'n-input': ninput,
+  'n-input-number': ninputnumber,
+  'n-layout': nlayout,
+  'n-layout-content': nlayoutcontent,
+  'n-layout-footer': nlayoutfooter,
+  'n-layout-header': nlayoutheader,
+  'n-layout-sider': nlayoutsider,
+  'n-list': nlist,
+  'n-loading-bar-provider': nloadingbarprovider,
+  'n-log': nlog,
+  'n-marquee': nmarquee,
+  'n-mention': nmention,
+  'n-menu': nmenu,
+  'n-message-provider': nmessageprovider,
+  'n-modal-provider': nmodalprovider,
+  'n-notification-provider': nnotificationprovider,
+  'n-number-animation': nnumberanimation,
+  'n-page-header': npageheader,
+  'n-pagination': npagination,
+  'n-popconfirm': npopconfirm,
+  'n-popover': npopover,
+  'n-popselect': npopselect,
+  'n-progress': nprogress,
+  'n-qr-code': nqrcode,
+  'n-radio': nradio,
+  'n-rate': nrate,
+  'n-result': nresult,
+  'n-scrollbar': nscrollbar,
+  'n-select': nselect,
+  'n-skeleton': nskeleton,
+  'n-slider': nslider,
+  'n-space': nspace,
+  'n-spin': nspin,
+  'n-split': nsplit,
+  'n-statistic': nstatistic,
+  'n-steps': nsteps,
+  'n-switch': nswitch,
+  'n-table': ntable,
+  'n-tabs': ntabs,
+  'n-tag': ntag,
+  'n-thing': nthing,
+  'n-time-picker': ntimepicker,
+  'n-time': ntime,
+  'n-timeline': ntimeline,
+  'n-transfer': ntransfer,
+  'n-tree': ntree,
+  'n-tree-select': ntreeselect,
+  'n-typography': ntypography,
+  'n-upload': nupload,
+  'n-watermark': nwatermark
 }
