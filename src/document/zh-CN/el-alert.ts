@@ -5,11 +5,11 @@ import { DocumentSlot } from '@/document'
 
 export const attributes: DocumentAttribute[] = [
   {
-    name: 'title',
-    description: '标题',
-    type: 'string',
+    name: 'bordered',
+    description: '头像是否带边框',
+    type: 'boolean',
     value: '—',
-    default: '—'
+    default: 'false'
   },
   {
     name: 'type',

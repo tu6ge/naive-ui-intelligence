@@ -17,6 +17,8 @@ export interface DocumentAttribute {
   value: string
   // 默认值
   default: any
+  // 版本
+  version: string
 }
 
 /**

@@ -79,7 +79,7 @@ import skeletonItem from './el-skeleton-item'
 import skeleton from './el-skeleton'
 
 export default {
-  'el-alert': elalert,
+  'n-alert': elalert,
   'el-aside': elaside,
   'el-autocomplete': elautocomplete,
   'el-avatar': elavatar,

@@ -20,7 +20,7 @@ export class ElementHoverProvier implements HoverProvider {
 
     const tag: TagObject | undefined = this.getTag()
 
-    if (!/^[E|e]l/.test(tag?.text || '')) {
+    if (!/^n/.test(tag?.text || '')) {
       // 如果不是element的标签(E|el开头) 则返回 null 表示没有hover
       return null
     }
