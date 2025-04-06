@@ -1,40 +1,9 @@
 <p>
-  <h1 align="center">Element UI Helper</h1>
+  <h1 align="center">Naive UI Vscode Plugin</h1>
 </p>
 
-<p align="center">
-  <a href="https://github.com/HULANG-BTB/element-ui-helper/issues">
-    <img src="https://img.shields.io/github/issues/HULANG-BTB/element-ui-helper">
-  </a>
-  <a href="https://github.com/HULANG-BTB/element-ui-helper.git">
-    <img src="https://img.shields.io/github/forks/HULANG-BTB/element-ui-helper">
-  </a>
-  <a href="https://github.com/HULANG-BTB/element-ui-helper.git">
-    <img src="https://img.shields.io/github/stars/HULANG-BTB/element-ui-helper">
-  </a>
-  <a href="https://github.com/HULANG-BTB/element-ui-helper/blob/master/LICENSE.MD">
-    <img src="https://img.shields.io/github/license/HULANG-BTB/element-ui-helper">
-  </a>
-  <a href="https://github.com/HULANG-BTB/element-ui-helper.git">
-    <img alt="Travis (.com) branch" src="https://img.shields.io/travis/com/HULANG-BTB/element-ui-helper/master">
-  </a>
-  <a href="https://github.com/HULANG-BTB/element-ui-helper.git">
-    <img alt="Visual Studio Marketplace Rating (Stars)" src="https://img.shields.io/visual-studio-marketplace/stars/oibit.element-ui-helper">
-  </a>
-  <a href="https://github.com/HULANG-BTB/element-ui-helper.git">
-    <img alt="Visual Studio Marketplace Last Updated" src="https://img.shields.io/visual-studio-marketplace/last-updated/oibit.element-ui-helper">
-  </a>
-  <a href="https://github.com/HULANG-BTB/element-ui-helper.git">
-    <img alt="Visual Studio Marketplace Downloads" src="https://img.shields.io/visual-studio-marketplace/d/oibit.element-ui-helper">
-  </a>
-  <a href="https://github.com/HULANG-BTB/element-ui-helper.git">
-    <img alt="Visual Studio Marketplace Installs" src="https://img.shields.io/visual-studio-marketplace/i/oibit.element-ui-helper"/>
-  </a>
-  <br>
-</p>
-> Element-UI-Helper is a VS Code extension for Element-UI.
 
-Element-UI is a great library. More and more projects use it. So, For helping developer write more efficient by Element-UI, Element-UI-Helper is born.This is not an official project, but all the documents are from the official website.
+> Naive UI is a VS Code extension for Naive-UI.
 
 ## Features
 
@@ -54,10 +23,8 @@ The only step to use this extension is moving your cursor to Element-UI tag or p
 
 ## Contribution
 
-If you want to help improve this project, Please fork and initiate. a pull request after you fix some bugs or finished some new features. Your pull request will make Element-UI-Helper better.
+If you want to help improve this project, Please fork and initiate. a pull request after you fix some bugs or finished some new features. Your pull request will make Naive UI better.
 
 ## LICENSE
 
-![https://img.shields.io/github/license/HULANG-BTB/element-ui-helper](https://img.shields.io/github/license/HULANG-BTB/element-ui-helper)
-
-## **Enjoy yourself!**
+MIT

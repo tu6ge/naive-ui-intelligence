@@ -1,19 +1,19 @@
 {
-  "name": "naive-ui",
-  "displayName": "naive-ui",
+  "name": "naive-ui-intelligence",
+  "displayName": "naive-ui-intelligence",
   "version": "1.4.1",
   "description": "Document Hover Tips And Autocomplete Tools.",
   "author": {
-    "name": "AloneH",
-    "email": "admin@oibit.cn",
-    "url": "https://oibit.cn"
+    "name": "tu6ge",
+    "email": "tu6ge@qq.com",
+    "url": "https://github.com/tu6ge"
   },
-  "publisher": "oibit",
+  "publisher": "tu6ge",
   "license": "MIT",
-  "icon": "element.png",
+  "icon": "naivelogo.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/HULANG-BTB/element-ui-helper.git"
+    "url": "https://github.com/tu6ge/naive-ui-vscode-plugin.git"
   },
   "engines": {
     "vscode": "^1.50.0"
