@@ -1,5 +1,5 @@
 <p>
-  <h1 align="center">Naive UI Vscode Plugin</h1>
+  <h1 align="center">Naive UI Intelligence</h1>
 </p>
 
 
