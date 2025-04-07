@@ -1,3 +1,4 @@
+import naffix from './n-affix'
 import nalert from './n-alert'
 import nanchor from './n-anchor'
 import nautocomplete from './n-auto-complete'
@@ -97,6 +98,7 @@ import nupload from './n-upload'
 import nwatermark from './n-watermark'
 
 export default {
+  'n-affix': naffix,
   'n-alert': nalert,
   'n-anchor': nanchor,
   'n-auto-complete': nautocomplete,
