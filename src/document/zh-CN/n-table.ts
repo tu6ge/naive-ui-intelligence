@@ -41,8 +41,8 @@ export const attributes: DocumentAttribute[] = [
     type: "'small' | 'medium' | 'large'",
     default: "'medium'",
     description: '表格尺寸大小',
-    value: '',
-    version: 'small/medium/large'
+    value: 'small/medium/large',
+    version: ''
   },
   {
     name: 'striped',
