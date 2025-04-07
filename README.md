@@ -14,11 +14,11 @@
 
 The only step to use this extension is moving your cursor to Naive-UI tag or prop.
 
-[![gkk7IH.gif](https://gitee.com/tu6ge/formulate_el_ui/raw/master/%E5%8A%A8%E7%94%BB2.gif)](https://imgtu.com/i/gkk7IH)
+![gkk7IH.gif](https://github.com/tu6ge/naive-ui-intelligence/blob/master/asstes/img2.gif?raw=true)
 
 ### Autocomplete
 
-[![gkkTde.gif](https://gitee.com/tu6ge/formulate_el_ui/raw/master/%E5%8A%A8%E7%94%BB1.gif)](https://imgtu.com/i/gkkTde)
+![gkkTde.gif](https://github.com/tu6ge/naive-ui-intelligence/blob/master/asstes/img1.gif?raw=true)
 
 ## Support
 
