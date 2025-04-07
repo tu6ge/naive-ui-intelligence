@@ -49,6 +49,10 @@ The only step to use this extension is moving your cursor to Naive-UI tag or pro
 
 ![gkkTde.gif](https://github.com/tu6ge/naive-ui-intelligence/blob/master/asstes/img1.gif?raw=true)
 
+### Attribute Value Select
+
+![gkkTde.gif](https://github.com/tu6ge/naive-ui-intelligence/blob/master/asstes/img3.gif?raw=true)
+
 ## Support
 
 - Vue
