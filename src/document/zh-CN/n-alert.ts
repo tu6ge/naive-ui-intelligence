@@ -40,7 +40,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'type',
     type: "'default' | 'info' | 'success' | 'warning' | 'error'",
     default: 'default',
-    value: '-',
+    value: 'default/info/success/warning/error',
     description: 'alert 的类型',
     version: ''
   },

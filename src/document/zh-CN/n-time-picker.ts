@@ -129,7 +129,7 @@ export const attributes: DocumentAttribute[] = [
     type: "'top-start' | 'top' | 'top-end' | 'right-start' | 'right' | 'right-end' | 'bottom-start' | 'bottom' | 'bottom-end' | 'left-start' | 'left' | 'left-end'",
     default: "'bottom-start'",
     description: '时间选择器的面板的弹出位置',
-    value: '',
+    value: 'top-start/top/top-end/right-start/right/right-end/bottom-start/bottom/bottom-end/left-start/left/left-end',
     version: '2.25.0'
   },
   {
@@ -145,7 +145,7 @@ export const attributes: DocumentAttribute[] = [
     type: "'small' | 'medium' | 'large'",
     default: "'medium'",
     description: '选择框的尺寸',
-    value: '',
+    value: 'small/medium/large',
     version: ''
   },
   {
@@ -153,7 +153,7 @@ export const attributes: DocumentAttribute[] = [
     type: "'success' | 'warning' | 'error'",
     default: 'undefined',
     description: '验证状态',
-    value: '',
+    value: 'success/warning/error',
     version: '2.27.0'
   },
   {

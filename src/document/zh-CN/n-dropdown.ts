@@ -106,7 +106,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'medium'",
     description: '下拉菜单的尺寸大小',
     version: '',
-    value: '-'
+    value: 'small/medium/large/huge'
   },
   {
     name: 'on-clickoutside',

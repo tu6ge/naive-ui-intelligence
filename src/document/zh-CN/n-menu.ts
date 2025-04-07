@@ -82,7 +82,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'top'",
     description: "仅在 `mode='horizontal'` 模式下生效",
     version: '',
-    value: ''
+    value: 'top-start/top/top-end/right-start/right/right-end/bottom-start/bottom/bottom-end/left-start/left/left-end'
   },
   {
     name: 'dropdown-props',

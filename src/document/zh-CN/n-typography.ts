@@ -8,7 +8,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'type',
     type: "'default' | 'success' | 'info' | 'warning' | 'error'",
     default: "'default'",
-    value: '',
+    value: 'default/success/info/warning/error',
     description: '排印类型',
     version: ''
   },
@@ -56,7 +56,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'depth',
     type: "'1' | '2' | '3' | 1 | 2 | 3",
     default: 'undefined',
-    value: '',
+    value: '1/2/3',
     description: '文字深度',
     version: ''
   },

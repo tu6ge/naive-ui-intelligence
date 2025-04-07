@@ -26,7 +26,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'M'",
     description: '二维码纠错级别',
     version: '2.36.0',
-    value: ''
+    value: 'L/M/Q/H'
   },
   {
     name: 'icon-background-color',
@@ -90,7 +90,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'canvas'",
     description: '自定义二维码渲染类型',
     version: '2.38.2',
-    value: ''
+    value: 'canvas/svg'
   }
 ]
 

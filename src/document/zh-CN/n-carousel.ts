@@ -40,7 +40,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'direction',
     type: "'horizontal' | 'vertical'",
     default: 'horizontal',
-    value: '-',
+    value: 'horizontal/vertical',
     description: '轮播图显示的方向',
     version: '-'
   },
@@ -48,7 +48,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'dot-placement',
     type: "'top' | 'bottom' | 'left' | 'right'",
     default: 'bottom',
-    value: '-',
+    value: 'top/bottom/left/right',
     description: '轮播指示点位置',
     version: '2.24.0'
   },
@@ -56,7 +56,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'dot-type',
     type: "'dot' | 'line'",
     default: 'dot',
-    value: '-',
+    value: 'dot/line',
     description: '轮播指示点样式',
     version: '2.24.0'
   },
@@ -72,7 +72,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'effect',
     type: "'slide' | 'fade' | 'card' | 'custom'",
     default: 'slide',
-    value: '-',
+    value: 'slide/fade/card/custom',
     description: '轮播图切换时的过渡效果',
     version: '2.24.0, "card" 2.24.2'
   },
@@ -128,7 +128,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'slides-per-view',
     type: "'auto' | number",
     default: 1,
-    value: '-',
+    value: 'auto',
     description: '每一页显示的轮播图数量',
     version: '2.24.0'
   },
@@ -184,7 +184,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'trigger',
     type: "'click' | 'hover'",
     default: 'click',
-    value: '-',
+    value: 'click/hover',
     description: '触发切换的方式',
     version: '-'
   },

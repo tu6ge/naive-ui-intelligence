@@ -66,7 +66,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'if'",
     description: "n-drawer 在控制内容是否渲染时使用的指令，'if' 对应 v-if，'show' 对应 v-show",
     version: '',
-    value: '-'
+    value: 'if/show'
   },
   {
     name: 'height',
@@ -130,7 +130,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'right'",
     description: '抽屉展示的位置',
     version: '',
-    value: '-'
+    value: 'top/right/bottom/left'
   },
   {
     name: 'resizable',

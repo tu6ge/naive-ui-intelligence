@@ -64,7 +64,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'type',
     type: "'default' | 'success' | 'error' | 'warning' | 'info'",
     default: 'default',
-    value: '-',
+    value: 'default/success/error/warning/info',
     description: '标记显示类型',
     version: ''
   },

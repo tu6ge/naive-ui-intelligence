@@ -41,7 +41,7 @@ export const attributes: DocumentAttribute[] = [
     type: "'relative' | 'date' | 'datetime'",
     default: "'datetime'",
     description: '时间类型',
-    value: '',
+    value: 'relative/date/datetime',
     version: ''
   },
   {

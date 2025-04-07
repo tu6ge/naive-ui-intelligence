@@ -58,7 +58,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'top'",
     description: '所有 Message 显示的位置',
     version: '',
-    value: ''
+    value: 'top/top-left/top-right/bottom/bottom-left/bottom-right'
   },
   {
     name: 'to',

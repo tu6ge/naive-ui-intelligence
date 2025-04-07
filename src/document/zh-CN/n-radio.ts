@@ -50,7 +50,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'medium'",
     description: '大小',
     version: '',
-    value: ''
+    value: 'small/medium/large'
   },
   {
     name: 'value',

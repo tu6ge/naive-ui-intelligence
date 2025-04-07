@@ -8,7 +8,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'attr-type',
     type: "'button' | 'submit' | 'reset'",
     default: 'button',
-    value: '-',
+    value: 'button/submit/reset',
     description: '按钮的 DOM 的 `type` 属性',
     version: ''
   },
@@ -89,7 +89,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'icon-placement',
     type: "'left' | 'right'",
     default: 'left',
-    value: '-',
+    value: 'left/right',
     description: '按钮中图标的位置',
     version: ''
   },
@@ -137,7 +137,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'size',
     type: "'tiny' | 'small' | 'medium' | 'large'",
     default: 'medium',
-    value: '-',
+    value: 'tiny/small/medium/large',
     description: '按钮的尺寸',
     version: ''
   },
@@ -185,7 +185,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'type',
     type: "'default' | 'tertiary' | 'primary' | 'success' | 'info' | 'warning' | 'error'",
     default: 'default',
-    value: '-',
+    value: 'default/tertiary/primary/success/info/warning/error',
     description: '按钮的类型',
     version: ''
   },

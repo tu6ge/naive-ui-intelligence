@@ -90,7 +90,7 @@ export const attributes: DocumentAttribute[] = [
     default: 'undefined',
     description: '日历上一周的开始，0 代表周一',
     version: '',
-    value: '-'
+    value: '0/1/2/3/4/5/6'
   },
   {
     name: 'formatted-value',
@@ -130,7 +130,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'bottom-start'",
     description: '面板的弹出位置',
     version: '2.25.0',
-    value: '-'
+    value: 'top-start/top/top-end/right-start/right/right-end/bottom-start/bottom/bottom-end/left-start/left/left-end'
   },
   {
     name: 'quarter-format',
@@ -162,7 +162,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'medium'",
     description: '尺寸',
     version: '',
-    value: '-'
+    value: 'small/medium/large'
   },
   {
     name: 'status',
@@ -170,7 +170,7 @@ export const attributes: DocumentAttribute[] = [
     default: 'undefined',
     description: '验证状态',
     version: '2.27.0',
-    value: '-'
+    value: 'success/warning/error'
   },
   {
     name: 'time-picker-format',
@@ -194,7 +194,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'date'",
     description: 'Date Picker 的类型',
     version: "'quarter' v2.22.0, 'monthrange' 2.28.3",
-    value: '-'
+    value: 'date/datetime/daterange/datetimerange/month/monthrange/year/yearrange/quarter/quarterrange/week'
   },
   {
     name: 'value',

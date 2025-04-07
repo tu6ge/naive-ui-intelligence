@@ -59,7 +59,7 @@ export const attributes: DocumentAttribute[] = [
     default: 'fill',
     description: '图片在容器内的的适应类型',
     version: '',
-    value: ''
+    value: 'fill/contain/cover/none/scale-down'
   },
   {
     name: 'preview-src',

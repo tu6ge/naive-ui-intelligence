@@ -25,7 +25,7 @@ export const attributes: DocumentAttribute[] = [
     type: "'left' | 'right'",
     default: "'left'",
     description: '方向',
-    value: '',
+    value: 'left/right',
     version: ''
   },
   {
@@ -33,7 +33,7 @@ export const attributes: DocumentAttribute[] = [
     type: "'medium' | 'large'",
     default: "'medium'",
     description: '大小',
-    value: '',
+    value: 'medium/large',
     version: ''
   }
 ]

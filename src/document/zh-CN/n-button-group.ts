@@ -8,7 +8,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'size',
     type: "'tiny' | 'small' | 'medium' | 'large'",
     default: undefined,
-    value: '-',
+    value: 'tiny/small/medium/large',
     description: '在组内的按钮的尺寸。如果设定，内部的按钮尺寸将不生效',
     version: ''
   },

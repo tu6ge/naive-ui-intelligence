@@ -50,7 +50,7 @@ export const attributes: DocumentAttribute[] = [
     default: 'undefined',
     description: '骨架大小',
     value: '',
-    version: ''
+    version: 'small/medium/large'
   },
   {
     name: 'repeat',

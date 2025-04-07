@@ -240,7 +240,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'placement',
     type: "'top-start' | 'top' | 'top-end' | 'right-start' | 'right' | 'right-end' | 'bottom-start' | 'bottom' | 'bottom-end' | 'left-start' | 'left' | 'left-end'",
     default: "'bottom-start'",
-    value: '',
+    value: 'top-start/top/top-end/right-start/right/right-end/bottom-start/bottom/bottom-end/left-start/left/left-end',
     description: '选择器的弹出位置.',
     version: '2.25.0'
   },
@@ -306,13 +306,13 @@ export const attributes: DocumentAttribute[] = [
     default: "'medium'",
     value: '',
     description: '组件尺寸',
-    version: ''
+    version: 'small/medium/large'
   },
   {
     name: 'status',
     type: "'success' | 'warning' | 'error'",
     default: 'undefined',
-    value: '',
+    value: 'success/warning/error',
     description: '验证状态',
     version: '2.27.0'
   },

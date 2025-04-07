@@ -18,7 +18,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'medium'",
     description: '大小',
     version: '',
-    value: ''
+    value: 'small/medium/large/huge'
   },
   {
     name: 'status',
@@ -26,7 +26,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'info'",
     description: '状态',
     version: '',
-    value: ''
+    value: 'info/success/warning/error/404/403/500/418'
   },
   {
     name: 'title',

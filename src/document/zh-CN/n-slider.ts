@@ -65,7 +65,7 @@ export const attributes: DocumentAttribute[] = [
     type: "'top-start' | 'top' | 'top-end' | 'right-start' | 'right' | 'right-end' | 'bottom-start' | 'bottom' | 'bottom-end' | 'left-start' | 'left' | 'left-end'",
     default: 'undefined',
     description: 'Tooltip 的弹出位置',
-    value: '',
+    value: 'top-start/top/top-end/right-start/right/right-end/bottom-start/bottom/bottom-end/left-start/left/left-end',
     version: '2.25.0'
   },
   {

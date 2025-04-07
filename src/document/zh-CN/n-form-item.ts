@@ -58,7 +58,7 @@ export const attributes: DocumentAttribute[] = [
     default: 'undefined',
     description: '标签的文本对齐方式。如果没有被设定，使用外层表单的 `label-align`',
     version: '',
-    value: '-'
+    value: 'left/right'
   },
   {
     name: 'label-placement',
@@ -66,7 +66,7 @@ export const attributes: DocumentAttribute[] = [
     default: 'undefined',
     description: '如果没有被设定，使用外层表单的 `label-placement`',
     version: '',
-    value: '-'
+    value: 'left/top'
   },
   {
     name: 'label-style',
@@ -146,7 +146,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'right'",
     description: '必填的星号的位置。如果没有被设定，使用外层 `n-form` 的 `require-mark-placement`',
     version: '2.24.0',
-    value: '-'
+    value: 'left/right/right-hanging'
   },
   {
     name: 'size',
@@ -154,7 +154,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'medium'",
     description: '尺寸',
     version: '',
-    value: '-'
+    value: 'small/medium/large'
   },
   {
     name: 'validation-status',
@@ -162,7 +162,7 @@ export const attributes: DocumentAttribute[] = [
     default: 'undefined',
     description: '表单的验证状态。不设为 `undefined`时，会覆盖规则验证的结果',
     version: '',
-    value: '-'
+    value: 'error/success/warning'
   }
 ]
 

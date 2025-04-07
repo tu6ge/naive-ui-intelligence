@@ -65,7 +65,7 @@ export const attributes: DocumentAttribute[] = [
     type: "'small' | 'medium' | 'large'",
     default: "'medium'",
     description: '开关大小',
-    value: '',
+    value: 'small/medium/large',
     version: ''
   },
   {

@@ -43,7 +43,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'self'",
     description: "'self' 根据自身宽度进行响应式布局，'screen' 根据屏幕断点进行响应式布局",
     version: '',
-    value: '-'
+    value: 'self/screen'
   },
   {
     name: 'item-responsive',

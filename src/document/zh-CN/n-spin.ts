@@ -41,7 +41,7 @@ export const attributes: DocumentAttribute[] = [
     type: "'small' | 'medium' | 'large' | number",
     default: "'medium'",
     description: 'Spin 的尺寸',
-    value: '',
+    value: 'small/medium/large',
     version: ''
   },
   {

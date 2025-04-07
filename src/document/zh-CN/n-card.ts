@@ -152,7 +152,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'size',
     type: "'small' | 'medium' | 'large' | 'huge'",
     default: 'medium',
-    value: '-',
+    value: 'small/medium/large/huge',
     description: '卡片的尺寸',
     version: '-'
   },

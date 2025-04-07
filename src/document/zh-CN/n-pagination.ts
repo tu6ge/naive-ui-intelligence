@@ -146,7 +146,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'medium'",
     description: '分页按钮的大小',
     version: '2.29.0',
-    value: ''
+    value: 'small/medium/large'
   },
   {
     name: 'simple',

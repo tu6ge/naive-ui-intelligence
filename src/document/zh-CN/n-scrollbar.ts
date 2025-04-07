@@ -34,7 +34,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'hover'",
     description: "显示滚动条的时机，'none' 表示一直显示",
     version: '2.29.1',
-    value: ''
+    value: 'hover/none'
   },
   {
     name: 'x-scrollable',
@@ -50,7 +50,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'bottom'",
     description: '横向滚动时滚动条的位置',
     version: '2.40.0',
-    value: ''
+    value: 'top/bottom'
   },
   {
     name: 'y-placement',
@@ -58,7 +58,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'right'",
     description: '纵向滚动时滚动条的位置',
     version: '2.40.0',
-    value: ''
+    value: 'left/right'
   },
   {
     name: 'on-scroll',

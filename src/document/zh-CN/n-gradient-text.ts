@@ -26,7 +26,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'primary'",
     description: '渐变文字的类型',
     version: '',
-    value: '-'
+    value: 'primary/info/success/warning/error'
   }
 ]
 

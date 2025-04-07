@@ -32,7 +32,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'placement',
     type: "'top-start' | 'top' | 'top-end' | 'right-start' | 'right' | 'right-end' | 'bottom-start' | 'bottom' | 'bottom-end' | 'left-start' | 'left' | 'left-end'",
     default: "'bottom-start'",
-    value: '-',
+    value: 'top-start/top/top-end/right-start/right/right-end/bottom-start/bottom/bottom-end/left-start/left/left-end',
     description: '面板的弹出位置',
     version: '2.25.0'
   },
@@ -72,7 +72,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'size',
     type: "'small' | 'medium' | 'large'",
     default: "'medium'",
-    value: '-',
+    value: 'small/medium/large',
     description: '颜色选择器的尺寸',
     version: '-'
   },

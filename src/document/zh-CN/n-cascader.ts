@@ -88,7 +88,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'expand-trigger',
     type: "'click' | 'hover'",
     default: 'click',
-    value: '-',
+    value: 'click/hover',
     description: '在 `remote` 被设定时 hover 不生效',
     version: '-'
   },
@@ -184,7 +184,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'placement',
     type: "'top-start' | 'top' | 'top-end' | 'right-start' | 'right' | 'right-end' | 'bottom-start' | 'bottom' | 'bottom-end' | 'left-start' | 'left' | 'left-end'",
     default: "'bottom-start'",
-    value: '-',
+    value: 'top-start/top/top-end/right-start/right/right-end/bottom-start/bottom/bottom-end/left-start/left/left-end',
     description: '弹出位置',
     version: '2.25.0'
   },
@@ -248,7 +248,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'size',
     type: "'small' | 'medium' | 'large'",
     default: "'medium'",
-    value: '-',
+    value: 'small/medium/large',
     description: '尺寸',
     version: '-'
   },
@@ -256,7 +256,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'status',
     type: "'success' | 'warning' | 'error'",
     default: undefined,
-    value: '-',
+    value: 'success/warning/error',
     description: '验证状态',
     version: '2.27.0'
   },

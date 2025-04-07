@@ -26,7 +26,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'text'",
     description: '输入框类型',
     version: '',
-    value: ''
+    value: 'text/textarea'
   },
   {
     name: 'separator',
@@ -98,7 +98,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'bottom-start'",
     description: '选择面板的弹出位置.',
     version: '2.25.0',
-    value: ''
+    value: 'top-start/top/top-end/right-start/right/right-end/bottom-start/bottom/bottom-end/left-start/left/left-end'
   },
   {
     name: 'render-label',
@@ -114,7 +114,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'medium'",
     description: '输入框的大小',
     version: '',
-    value: ''
+    value: 'small/medium/large'
   },
   {
     name: 'status',
@@ -122,7 +122,7 @@ export const attributes: DocumentAttribute[] = [
     default: 'undefined',
     description: '验证状态',
     version: '2.27.0',
-    value: ''
+    value: 'success/warning/error'
   },
   {
     name: 'to',

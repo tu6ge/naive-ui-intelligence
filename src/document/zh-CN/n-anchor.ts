@@ -56,7 +56,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'type',
     type: "'rail' | 'block'",
     default: 'rail',
-    value: '-',
+    value: 'rail/block',
     description: "Anchor 的风格，`'block'` 为块状风格，`'rail'` 为轨道风格",
     version: ''
   }

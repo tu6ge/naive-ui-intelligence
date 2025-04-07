@@ -200,7 +200,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'response-type',
     type: "'' | 'arraybuffer' | 'blob' | 'document' | 'json' | 'text'",
     default: "''",
-    value: '',
+    value: 'arraybuffer/blob/document/json/text',
     description: '`n-upload` 使用的 `XMLHttpRequest` 的 `responseType`',
     version: '2.33.3'
   },

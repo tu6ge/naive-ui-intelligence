@@ -67,7 +67,7 @@ export const attributes: DocumentAttribute[] = [
     default: 'left',
     description: '组件折叠侧边栏在哪一侧',
     version: '',
-    value: ''
+    value: 'left/right'
   },
   {
     name: 'on-scroll',

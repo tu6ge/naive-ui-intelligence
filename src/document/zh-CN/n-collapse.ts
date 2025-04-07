@@ -16,7 +16,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'arrow-placement',
     type: "'left' | 'right'",
     default: 'left',
-    value: '-',
+    value: 'left/right',
     description: '箭头位置',
     version: '-'
   },
@@ -32,7 +32,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'display-directive',
     type: "'if' | 'show'",
     default: 'if',
-    value: '-',
+    value: 'if/show',
     description: '内部 `n-collapse-item` 在控制内容是否渲染时使用的指令，`if` 对应 `v-if`，`show` 对应 `v-show`',
     version: '-'
   },

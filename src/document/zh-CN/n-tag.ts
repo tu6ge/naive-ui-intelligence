@@ -66,7 +66,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'medium'",
     description: '尺寸',
     value: '',
-    version: ''
+    version: 'small/medium/large'
   },
   {
     name: 'strong',
@@ -89,7 +89,7 @@ export const attributes: DocumentAttribute[] = [
     type: "'default' | 'primary' | 'info' | 'success' | 'warning' | 'error'",
     default: "'default'",
     description: '类型',
-    value: '',
+    value: 'default/primary/info/success/warning/error',
     version: ''
   },
   {

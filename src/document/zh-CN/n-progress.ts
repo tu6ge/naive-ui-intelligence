@@ -66,7 +66,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'outside'",
     description: "'line' 类型设置指示标位置",
     version: '',
-    value: ''
+    value: 'inside/outside'
   },
   {
     name: 'indicator-text-color',
@@ -130,7 +130,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'default'",
     description: '进度条状态',
     version: '',
-    value: ''
+    value: 'default/success/error/warning/info'
   },
   {
     name: 'stroke-width',
@@ -146,7 +146,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'line'",
     description: '进度条类型',
     version: "'dashboard' 2.25.2",
-    value: ''
+    value: 'line/circle/multiple-circle/dashboard'
   },
   {
     name: 'unit',

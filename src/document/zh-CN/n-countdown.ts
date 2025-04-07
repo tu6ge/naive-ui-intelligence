@@ -24,7 +24,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'precision',
     type: '0 | 1 | 2 | 3',
     default: 0,
-    value: '-',
+    value: '0/1/2/3',
     description: '倒计时的秒显示的精度',
     version: '2.23.2'
   },

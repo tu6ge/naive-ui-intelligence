@@ -147,7 +147,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'medium'",
     description: '菜单的尺寸',
     version: '2.40.0',
-    value: ''
+    value: 'tiny/small/medium/large'
   },
   {
     name: 'multiple',
@@ -187,7 +187,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'bottom-start'",
     description: '菜单的弹出位置',
     version: '2.25.0',
-    value: ''
+    value: 'top-start/top/top-end/right-start/right/right-end/bottom-start/bottom/bottom-end/left-start/left/left-end'
   },
   {
     name: 'remote',
@@ -267,7 +267,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'medium'",
     description: '组件尺寸',
     version: '',
-    value: ''
+    value: 'tiny/small/medium/large'
   },
   {
     name: 'status',
@@ -275,7 +275,7 @@ export const attributes: DocumentAttribute[] = [
     default: 'undefined',
     description: '验证状态',
     version: '2.27.0',
-    value: ''
+    value: 'success/warning/error'
   },
   {
     name: 'tag',

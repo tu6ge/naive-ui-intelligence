@@ -26,7 +26,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'fixed'",
     description: '按钮组的定位方式',
     version: '2.38.0',
-    value: '-'
+    value: 'relative/absolute/fixed'
   },
   {
     name: 'right',
@@ -42,7 +42,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'circle'",
     description: '按钮组的形状',
     version: '2.38.0',
-    value: '-'
+    value: 'circle/square'
   },
   {
     name: 'top',

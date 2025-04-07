@@ -34,7 +34,7 @@ export const attributes: DocumentAttribute[] = [
     default: '-',
     description: '标签的文本对齐方式',
     version: '',
-    value: '-'
+    value: 'left/right'
   },
   {
     name: 'label-placement',
@@ -42,7 +42,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'top'",
     description: '标签显示的位置',
     version: '',
-    value: '-'
+    value: 'left/top'
   },
   {
     name: 'model',
@@ -90,7 +90,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'right'",
     description: '必填星号的位置',
     version: '2.24.0',
-    value: '-'
+    value: 'left/right/right-hanging'
   },
   {
     name: 'size',
@@ -98,7 +98,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'medium'",
     description: '尺寸',
     version: '',
-    value: '-'
+    value: 'small/medium/large'
   },
   {
     name: 'validate-messages',

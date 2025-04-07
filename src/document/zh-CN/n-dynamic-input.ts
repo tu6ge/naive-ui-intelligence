@@ -74,7 +74,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'input'",
     description: '动态录入使用的预设，在不设定 `$slots.default` 的时候生效',
     version: '',
-    value: '-'
+    value: 'input/pair'
   },
   {
     name: 'show-sort-button',

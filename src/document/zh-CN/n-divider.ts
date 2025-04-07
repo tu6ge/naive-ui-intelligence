@@ -17,7 +17,7 @@ export const attributes: DocumentAttribute[] = [
     type: "'left' | 'right' | 'center'",
     default: "'center'",
     description: '标题的位置',
-    value: '-',
+    value: 'left/right/center',
     version: '-'
   },
   {

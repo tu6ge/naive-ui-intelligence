@@ -34,7 +34,7 @@ export const attributes: DocumentAttribute[] = [
     default: 'undefined',
     description: '触发菜单显示的方式',
     version: '2.38.0',
-    value: '-'
+    value: 'click/hover'
   },
   {
     name: 'position',
@@ -42,7 +42,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'fixed'",
     description: '按钮组的定位方式',
     version: '2.38.0',
-    value: '-'
+    value: 'relative/absolute/fixed'
   },
   {
     name: 'right',
@@ -58,7 +58,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'circle'",
     description: '按钮的形状',
     version: '2.38.0',
-    value: '-'
+    value: 'circle/square'
   },
   {
     name: 'show-menu',
@@ -82,7 +82,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'default'",
     description: '按钮的类型',
     version: '2.38.0',
-    value: '-'
+    value: 'default/primary'
   },
   {
     name: 'width',

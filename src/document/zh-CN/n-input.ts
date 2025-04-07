@@ -179,7 +179,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'medium'",
     description: '输入框尺寸',
     version: '',
-    value: ''
+    value: 'tiny/small/medium/large'
   },
   {
     name: 'status',
@@ -187,7 +187,7 @@ export const attributes: DocumentAttribute[] = [
     default: undefined,
     description: '验证状态',
     version: '2.25.0',
-    value: ''
+    value: 'success/warning/error'
   },
   {
     name: 'type',
@@ -195,7 +195,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'text'",
     description: '输入框类型',
     version: '',
-    value: ''
+    value: 'text/password/textarea'
   },
   {
     name: 'value',

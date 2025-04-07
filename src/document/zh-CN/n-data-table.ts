@@ -208,7 +208,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'pagination-behavior-on-filter',
     type: "'first' | 'current'",
     default: 'current',
-    value: '-',
+    value: 'first/current',
     description: '过滤操作后页面的状态，`first` 为回到首页，`current` 为停留在当前页',
     version: '2.28.3'
   },
@@ -296,7 +296,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'size',
     type: "'small' | 'medium' | 'large'",
     default: "'medium'",
-    value: '-',
+    value: 'small/medium/large',
     description: '表格的尺寸',
     version: '-'
   },
@@ -336,7 +336,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'summary-placement',
     type: "'top' | 'bottom'",
     default: "'bottom'",
-    value: '-',
+    value: 'top/bottom',
     description: '总结栏的位置',
     version: '2.33.3'
   },

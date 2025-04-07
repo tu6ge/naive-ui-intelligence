@@ -65,7 +65,7 @@ export const attributes: DocumentAttribute[] = [
     type: "'space-between' | 'space-around' | 'space-evenly' | 'start' | 'center' | 'end'",
     default: 'undefined',
     description: "`flex` 布局下主轴的排列方式，只对 `'line'` 和 `'bar'` 类型生效",
-    value: '',
+    value: 'space-between/space-around/space-evenly/start/center/end',
     version: '2.29.1'
   },
   {
@@ -73,7 +73,7 @@ export const attributes: DocumentAttribute[] = [
     type: "'small' | 'medium' | 'large'",
     default: "'medium'",
     description: '标签页的尺寸',
-    value: '',
+    value: 'small/medium/large',
     version: ''
   },
   {
@@ -113,7 +113,7 @@ export const attributes: DocumentAttribute[] = [
     type: "'left' | 'right' | 'top' | 'bottom'",
     default: "'top'",
     description: "标签的位置，对于 `'segment'` 类型的 `n-tabs` 不生效",
-    value: '',
+    value: 'left/right/top/bottom',
     version: '2.34.4'
   },
   {
@@ -145,7 +145,7 @@ export const attributes: DocumentAttribute[] = [
     type: "'click' | 'hover'",
     default: "'click'",
     description: '触发 tab 的方式',
-    value: '',
+    value: 'click/hover',
     version: '2.27.0'
   },
   {
@@ -153,7 +153,7 @@ export const attributes: DocumentAttribute[] = [
     type: "'bar' | 'line' | 'card' | 'segment'",
     default: "'bar'",
     description: '标签类型',
-    value: '',
+    value: 'bar/line/card/segment',
     version: ''
   },
   {

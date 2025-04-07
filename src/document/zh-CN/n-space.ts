@@ -10,7 +10,7 @@ export const attributes: DocumentAttribute[] = [
     default: 'undefined',
     description: '垂直排列方式',
     value: '',
-    version: ''
+    version: 'start/end/center/baseline/stretch'
   },
   {
     name: 'inline',
@@ -49,7 +49,7 @@ export const attributes: DocumentAttribute[] = [
     type: "'start' | 'end' | 'center' | 'space-around' | 'space-between' | 'space-evenly'",
     default: "'start'",
     description: '水平排列方式',
-    value: '',
+    value: 'start/end/center/space-around/space-between/space-evenly',
     version: "'space-evenly' 2.28.3"
   },
   {
@@ -65,7 +65,7 @@ export const attributes: DocumentAttribute[] = [
     type: "'small' | 'medium' | 'large' | number | [number, number]",
     default: "'medium'",
     description: '为数字时，是水平和垂直间距；为数组时，是 [水平间距, 垂直间距]',
-    value: '',
+    value: 'small/medium/large',
     version: ''
   },
   {

@@ -17,7 +17,7 @@ export const attributes: DocumentAttribute[] = [
     type: "'small' | 'medium'",
     default: "'medium'",
     description: '步骤条大小',
-    value: '',
+    value: 'small/medium',
     version: ''
   },
   {
@@ -25,7 +25,7 @@ export const attributes: DocumentAttribute[] = [
     type: "'process' | 'finish' | 'error' | 'wait'",
     default: "'process'",
     description: '步骤条状态',
-    value: '',
+    value: 'process/finish/error/wait',
     version: ''
   },
   {

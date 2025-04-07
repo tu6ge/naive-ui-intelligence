@@ -66,7 +66,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'left'",
     description: '图标放置的位置',
     version: '',
-    value: '-'
+    value: 'left/top'
   },
   {
     name: 'icon',
@@ -154,7 +154,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'warning'",
     description: '对话框类型',
     version: '',
-    value: '-'
+    value: 'error/success/warning/info'
   },
   {
     name: 'on-close',

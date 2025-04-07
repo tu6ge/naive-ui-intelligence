@@ -17,7 +17,7 @@ export const attributes: DocumentAttribute[] = [
     type: "'horizontal' | 'vertical'",
     default: "'horizontal'",
     description: 'Split 的分割方向',
-    value: '',
+    value: 'horizontal/vertical',
     version: '2.36.0'
   },
   {

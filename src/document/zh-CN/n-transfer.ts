@@ -98,7 +98,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'medium'",
     description: '尺寸',
     version: '2.32.0',
-    value: ''
+    value: 'small/medium/large'
   },
   {
     name: 'source-filterable',

@@ -58,7 +58,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'medium'",
     description: '图标尺寸',
     version: '',
-    value: ''
+    value: 'small/medium/large'
   },
   {
     name: 'value',

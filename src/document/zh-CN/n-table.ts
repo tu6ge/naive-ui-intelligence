@@ -42,7 +42,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'medium'",
     description: '表格尺寸大小',
     value: '',
-    version: ''
+    version: 'small/medium/large'
   },
   {
     name: 'striped',

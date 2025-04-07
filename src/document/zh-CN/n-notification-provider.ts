@@ -34,7 +34,7 @@ export const attributes: DocumentAttribute[] = [
     default: 'top-right',
     description: '所有通知框显示的位置',
     version: "'top' | 'bottom' 2.29.0",
-    value: ''
+    value: 'top/bottom/top-right/top-left/bottom-left/bottom-right'
   },
   {
     name: 'scrollable',

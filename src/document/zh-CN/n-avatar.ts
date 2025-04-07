@@ -57,7 +57,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'object-fit',
     type: "'fill' | 'contain' | 'cover' | 'none' | 'scale-down'",
     default: 'fill',
-    value: '-',
+    value: 'fill/contain/cover/none/scale-down',
     description: '头像的图片在容器内的的适应类型',
     version: ''
   },
@@ -89,7 +89,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'size',
     type: "'small' | 'medium' | 'large' | number",
     default: 'medium',
-    value: '-',
+    value: 'small/medium/large',
     description: '头像的尺寸',
     version: ''
   },

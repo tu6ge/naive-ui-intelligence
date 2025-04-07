@@ -34,7 +34,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'medium'",
     description: '为数字时，是水平和垂直间距；为数组时，是 [水平间距, 垂直间距]',
     version: '2.37.0',
-    value: '-'
+    value: 'small/medium/large'
   },
   {
     name: 'vertical',

@@ -26,7 +26,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'right'",
     description: '加减按钮的位置',
     version: '2.29.1',
-    value: ''
+    value: 'both/right'
   },
   {
     name: 'clearable',
@@ -155,7 +155,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'medium'",
     description: '输入框大小',
     version: '',
-    value: ''
+    value: 'tiny/small/medium/large'
   },
   {
     name: 'status',
@@ -163,7 +163,7 @@ export const attributes: DocumentAttribute[] = [
     default: undefined,
     description: '验证状态',
     version: '2.27.0',
-    value: ''
+    value: 'success/warning/error'
   },
   {
     name: 'step',

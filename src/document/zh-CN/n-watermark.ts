@@ -48,7 +48,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'font-style',
     type: "'normal' | 'italic' | `oblique ${number}deg`",
     default: 'normal',
-    value: '',
+    value: 'normal/italic',
     description: '字体风格',
     version: '2.25.3'
   },
@@ -160,7 +160,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'text-align',
     type: "'left' | 'center' | 'right'",
     default: 'left',
-    value: '',
+    value: 'left/center/right',
     description: '在文本有多行的情况下，多行文本的对齐方式',
     version: '2.38.2'
   },

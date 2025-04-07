@@ -90,7 +90,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'medium'",
     description: '尺寸大小',
     version: '',
-    value: '-'
+    value: 'small/medium/large'
   },
   {
     name: 'tag-class',
@@ -114,7 +114,7 @@ export const attributes: DocumentAttribute[] = [
     default: "'default'",
     description: '标签类型',
     version: '',
-    value: '-'
+    value: 'default/primary/info/success/warning/error'
   },
   {
     name: 'value',
