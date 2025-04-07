@@ -28,24 +28,28 @@ export class HoverDocumentGenerator {
       // 生成表头
       if (language === 'zh-CN') {
         markdownString.appendMarkdown(`### ${tag} 属性 \r`)
-        markdownString.appendMarkdown('| 属性 | 说明 | 类型 | 可选值 | 默认值 |\r')
+        markdownString.appendMarkdown('| 属性 | 说明 | 类型 | 可选值 | 默认值 | 版本 |\r')
       } else {
         markdownString.appendMarkdown(`### ${tag} Attributes \r`)
-        markdownString.appendMarkdown('| Attributes | Description | Type | Accepted Values | Default |\r')
+        markdownString.appendMarkdown('| Attributes | Description | Type | Accepted Values | Default | Version |\r')
       }
-      markdownString.appendMarkdown('|---|---|:-:|---|:-:|\r')
+      markdownString.appendMarkdown('|---|---|---|---|:-:|---|\r')
     }
     if (attribute.length === 0) {
       // 属性 和标签一样 显示全部
       attributes.forEach((row: DocumentAttribute) => {
-        markdownString.appendMarkdown(`|${row.name}|${row.description}|${row.type}|${row.value}|${row.default}|\r`)
+        // eslint-disable-next-line no-useless-escape
+        const type = row.type.replace(/\|/g, '\\|')
+        markdownString.appendMarkdown(`|${row.name}|${row.description}|${type}|${row.value}|${row.default}|${row.version}|\r`)
         isUndefined = false
       })
     } else {
       // 属性和标签不一样 显示标签下的某个属性的信息
       const row = attributes.find((row: DocumentAttribute) => row.name === attribute)
       if (row) {
-        markdownString.appendMarkdown(`|${row.name}|${row.description}|${row.type}|${row.value}|${row.default}|\r`)
+        // eslint-disable-next-line no-useless-escape
+        const type = row.type.replace(/\|/g, '\\|')
+        markdownString.appendMarkdown(`|${row.name}|${row.description}|${type}|${row.value}|${row.default}|${row.version}|\r`)
         isUndefined = false
       }
     }
