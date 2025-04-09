@@ -24,7 +24,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'options',
     type: 'Array<SelectOption | SelectGroupOption>',
     default: '[]',
-    description: '配置选项内容，详情参考 [Select](select#SelectOption-Properties)',
+    description: '配置选项内容，详情参考 [Select](https://www.naiveui.com/zh-CN/light/components/select#SelectOption-Properties)',
     version: '',
     value: ''
   },

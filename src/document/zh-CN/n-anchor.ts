@@ -9,7 +9,7 @@ export const attributes: DocumentAttribute[] = [
     type: 'boolean',
     default: false,
     value: '-',
-    description: 'Anchor 是否像 Affix 一样展示，如果设定为 `true`，它还会接受 [Affix](affix#Affix-Props) 的 Props',
+    description: 'Anchor 是否像 Affix 一样展示，如果设定为 `true`，它还会接受 [Affix](https://www.naiveui.com/zh-CN/light/components/affix#Affix-Props) 的 Props',
     version: ''
   },
   {

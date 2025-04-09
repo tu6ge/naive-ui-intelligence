@@ -41,7 +41,7 @@ export const attributes: DocumentAttribute[] = [
     type: '(options: UploadCustomRequestOptions) => void',
     default: 'undefined',
     value: '',
-    description: '自定义上传方法，类型参考 <n-a href="#UploadCustomRequestOptions-Type">UploadCustomRequestOptions</n-a>',
+    description: '自定义上传方法，类型参考 UploadCustomRequestOptions',
     version: ''
   },
   {
@@ -129,7 +129,7 @@ export const attributes: DocumentAttribute[] = [
     type: 'ImageGroupProps',
     default: 'undefined',
     value: '',
-    description: 'Upload 中预览图片组件的属性，参考 [ImageGroup Props](image#ImageGroup-Props)',
+    description: 'Upload 中预览图片组件的属性，参考 [ImageGroup Props](https://www.naiveui.com/zh-CN/light/components/image#ImageGroup-Props)',
     version: '2.24.0'
   },
   {

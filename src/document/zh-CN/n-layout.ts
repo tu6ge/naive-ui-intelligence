@@ -57,7 +57,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'scrollbar-props',
     type: 'ScrollbarProps',
     default: undefined,
-    description: '属性参考 [Scrollbar props](scrollbar#Scrollbar-Props)',
+    description: '属性参考 [Scrollbar props](https://www.naiveui.com/zh-CN/light/components/scrollbar#Scrollbar-Props)',
     version: '',
     value: ''
   },

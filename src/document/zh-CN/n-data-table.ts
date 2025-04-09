@@ -105,7 +105,7 @@ export const attributes: DocumentAttribute[] = [
     type: 'PopoverProps',
     default: '{ trigger: click, placement: bottom }',
     value: '-',
-    description: '过滤按钮的 Popover 属性，属性参考 [Popover props](popover#Popover-Props)',
+    description: '过滤按钮的 Popover 属性，属性参考 [Popover props](https://www.naiveui.com/zh-CN/light/components/popover#Popover-Props)',
     version: '2.39.0'
   },
   {
@@ -201,7 +201,7 @@ export const attributes: DocumentAttribute[] = [
     type: 'false | object',
     default: 'false',
     value: '-',
-    description: '属性参考 [Pagination props](pagination#Pagination-Props)',
+    description: '属性参考 [Pagination props](https://www.naiveui.com/zh-CN/light/components/pagination#Pagination-Props)',
     version: '-'
   },
   {
@@ -273,7 +273,7 @@ export const attributes: DocumentAttribute[] = [
     type: 'ScrollbarProps',
     default: 'undefined',
     value: '-',
-    description: '属性参考 [Scrollbar props](scrollbar#Scrollbar-Props)，DataTable 中已存在 on-scroll 属性，此处 on-scroll 属性不生效',
+    description: '属性参考 [Scrollbar props](https://www.naiveui.com/zh-CN/light/components/scrollbar#Scrollbar-Props)，DataTable 中已存在 on-scroll 属性，此处 on-scroll 属性不生效',
     version: '-'
   },
   {

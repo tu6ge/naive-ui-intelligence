@@ -88,7 +88,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'dropdown-props',
     type: 'DropdownProps',
     default: 'undefined',
-    description: "菜单折叠或 `mode='horizontal'` 模式时 Dropdown 的 props，请参考 [Dropdown Props](dropdown#Dropdown-Props)",
+    description: "菜单折叠或 `mode='horizontal'` 模式时 Dropdown 的 props，请参考 [Dropdown Props](https://www.naiveui.com/zh-CN/light/components/dropdown#Dropdown-Props)",
     version: '',
     value: ''
   },
