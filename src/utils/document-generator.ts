@@ -28,19 +28,19 @@ export class HoverDocumentGenerator {
       // 生成表头
       if (language === 'zh-CN') {
         markdownString.appendMarkdown(`### ${tag} 属性 \r`)
-        markdownString.appendMarkdown('| 属性 | 说明 | 类型 | 可选值 | 默认值 | 版本 |\r')
+        markdownString.appendMarkdown('| 属性 | 说明 | 类型 | 默认值 | 版本 |\r')
       } else {
         markdownString.appendMarkdown(`### ${tag} Attributes \r`)
-        markdownString.appendMarkdown('| Attributes | Description | Type | Accepted Values | Default | Version |\r')
+        markdownString.appendMarkdown('| Attributes | Description | Type | Default | Version |\r')
       }
-      markdownString.appendMarkdown('|---|---|---|---|:-:|---|\r')
+      markdownString.appendMarkdown('|---|---|---|:-:|---|\r')
     }
     if (attribute.length === 0) {
       // 属性 和标签一样 显示全部
       attributes.forEach((row: DocumentAttribute) => {
         // eslint-disable-next-line no-useless-escape
         const type = row.type.replace(/\|/g, '\\|')
-        markdownString.appendMarkdown(`|${row.name}|${row.description}|${type}|${row.value}|${row.default}|${row.version}|\r`)
+        markdownString.appendMarkdown(`|${row.name}|${row.description}|${type}|${row.default}|${row.version}|\r`)
         isUndefined = false
       })
     } else {
@@ -49,7 +49,7 @@ export class HoverDocumentGenerator {
       if (row) {
         // eslint-disable-next-line no-useless-escape
         const type = row.type.replace(/\|/g, '\\|')
-        markdownString.appendMarkdown(`|${row.name}|${row.description}|${type}|${row.value}|${row.default}|${row.version}|\r`)
+        markdownString.appendMarkdown(`|${row.name}|${row.description}|${type}|${row.default}|${row.version}|\r`)
         isUndefined = false
       }
     }
