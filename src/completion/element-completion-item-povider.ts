@@ -195,12 +195,13 @@ export class ElementCompletionItemProvider implements CompletionItemProvider<Com
     const prefix = preText.replace(/.*@([\w-]*)$/, '$1')
     const events: DocumentEvent[] = document[tag]?.events || []
     const likeTag = events.filter((evnet: DocumentEvent) => evnet.name.includes(prefix))
+
+    const start = preText.lastIndexOf('@') + 1
+    const end = start + prefix.length
+    const startPos = new Position(this._position.line, start)
+    const endPos = new Position(this._position.line, end)
+    const range = new Range(startPos, endPos)
     likeTag.forEach((event: DocumentEvent) => {
-      const start = preText.lastIndexOf('@') + 1
-      const end = start + prefix.length
-      const startPos = new Position(this._position.line, start)
-      const endPos = new Position(this._position.line, end)
-      const range = new Range(startPos, endPos)
       completionItems.push({
         label: `${event.name}`,
         sortText: `0${event.name}`,
@@ -228,12 +229,12 @@ export class ElementCompletionItemProvider implements CompletionItemProvider<Com
     const prefix = preText.replace(/.*[\s@:]/g, '')
     const attributes: DocumentAttribute[] = document[tag].attributes || []
     const likeTag = attributes.filter((attribute: DocumentAttribute) => attribute.name.includes(prefix))
+    const start = Math.max(preText.lastIndexOf(' '), preText.lastIndexOf(':')) + 1
+    const end = start + prefix.length
+    const startPos = new Position(this._position.line, start)
+    const endPos = new Position(this._position.line, end)
+    const range = new Range(startPos, endPos)
     likeTag.forEach((attribute: DocumentAttribute) => {
-      const start = Math.max(preText.lastIndexOf(' '), preText.lastIndexOf(':')) + 1
-      const end = start + prefix.length
-      const startPos = new Position(this._position.line, start)
-      const endPos = new Position(this._position.line, end)
-      const range = new Range(startPos, endPos)
       completionItems.push({
         label: `${attribute.name}`,
         sortText: `0${attribute.name}`,
