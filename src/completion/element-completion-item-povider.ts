@@ -264,12 +264,12 @@ export class ElementCompletionItemProvider implements CompletionItemProvider<Com
     const language = config?.language || ExtensionLanguage.cn
     const preText = this.getTextBeforePosition(this._position)
     const document: Record<string, any> = localDocument[language]
+    const start = preText.lastIndexOf('<') + 1
+    const end = preText.length - start + 1
+    const startPos = new Position(this._position.line, start)
+    const endPos = new Position(this._position.line, end)
+    const range = new Range(startPos, endPos)
     Object.keys(document).forEach((key) => {
-      const start = preText.lastIndexOf('<') + 1
-      const end = preText.length - start + 1
-      const startPos = new Position(this._position.line, start)
-      const endPos = new Position(this._position.line, end)
-      const range = new Range(startPos, endPos)
       completionItems.push({
         label: `${key}`,
         sortText: `0${key}`,
