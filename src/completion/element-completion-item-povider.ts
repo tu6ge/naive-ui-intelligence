@@ -235,13 +235,22 @@ export class ElementCompletionItemProvider implements CompletionItemProvider<Com
     const endPos = new Position(this._position.line, end)
     const range = new Range(startPos, endPos)
     likeTag.forEach((attribute: DocumentAttribute) => {
+      let insertText = new SnippetString().appendText(attribute.name)
+      if (attribute.value.indexOf('/') > -1) {
+        const values = attribute.value.split('/')
+        insertText = new SnippetString()
+          .appendText(attribute.name + '="')
+          .appendChoice(values)
+          .appendText('"')
+      }
+
       completionItems.push({
         label: `${attribute.name}`,
         sortText: `0${attribute.name}`,
         detail: `${tag} Attribute`,
         documentation: attribute.description,
         kind: CompletionItemKind.Value,
-        insertText: attribute.name,
+        insertText: insertText,
         range
       })
     })
