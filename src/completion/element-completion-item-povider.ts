@@ -249,7 +249,7 @@ export class ElementCompletionItemProvider implements CompletionItemProvider<Com
         sortText: `0${attribute.name}`,
         detail: `${tag} Attribute`,
         documentation: attribute.description,
-        kind: CompletionItemKind.Value,
+        kind: CompletionItemKind.Property,
         insertText: insertText,
         range
       })
@@ -284,7 +284,7 @@ export class ElementCompletionItemProvider implements CompletionItemProvider<Com
         label: `${key}`,
         sortText: `0${key}`,
         detail: 'NaiveUI Tag',
-        kind: CompletionItemKind.Value,
+        kind: CompletionItemKind.Keyword,
         insertText: new SnippetString().appendText(`${key}`).appendTabstop().appendText('>').appendTabstop().appendText(`</${key}>`),
         range
       })
