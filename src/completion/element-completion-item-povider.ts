@@ -146,7 +146,7 @@ export class ElementCompletionItemProvider implements CompletionItemProvider<Com
    * @param attr 属性
    */
   getAttrValues(tag: string, attr: string): string[] {
-    const config = workspace.getConfiguration().get<ExtensionConfigutation>('naive-ui-intelligence')
+    const config = workspace.getConfiguration().get<ExtensionConfigutation>('naive-ui-intellisense')
     const language = config?.language || ExtensionLanguage.cn
     const document: Record<string, any> = localDocument[language]
     const attributes: DocumentAttribute[] = document[tag].attributes || []
@@ -188,7 +188,7 @@ export class ElementCompletionItemProvider implements CompletionItemProvider<Com
    */
   getEventCompletionItems(tag: string): CompletionItem[] {
     let completionItems: CompletionItem[] = []
-    const config = workspace.getConfiguration().get<ExtensionConfigutation>('naive-ui-intelligence')
+    const config = workspace.getConfiguration().get<ExtensionConfigutation>('naive-ui-intellisense')
     const language = config?.language || ExtensionLanguage.cn
     const document: Record<string, any> = localDocument[language]
     const preText = this.getTextBeforePosition(this._position)
@@ -222,7 +222,7 @@ export class ElementCompletionItemProvider implements CompletionItemProvider<Com
    */
   getAttrCompletionItems(tag: string): CompletionItem[] {
     let completionItems: CompletionItem[] = []
-    const config = workspace.getConfiguration().get<ExtensionConfigutation>('naive-ui-intelligence')
+    const config = workspace.getConfiguration().get<ExtensionConfigutation>('naive-ui-intellisense')
     const language = config?.language || ExtensionLanguage.cn
     const document: Record<string, any> = localDocument[language]
     const preText = this.getTextBeforePosition(this._position)
@@ -270,7 +270,7 @@ export class ElementCompletionItemProvider implements CompletionItemProvider<Com
    */
   getTagCompletionItems(tag: string): CompletionItem[] {
     let completionItems: CompletionItem[] = []
-    const config = workspace.getConfiguration().get<ExtensionConfigutation>('naive-ui-intelligence')
+    const config = workspace.getConfiguration().get<ExtensionConfigutation>('naive-ui-intellisense')
     const language = config?.language || ExtensionLanguage.cn
     const preText = this.getTextBeforePosition(this._position)
     const document: Record<string, any> = localDocument[language]

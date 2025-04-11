@@ -154,7 +154,7 @@ export class ElementHoverProvier implements HoverProvider {
    * @param range 区域
    */
   getHoverInstance(tag: TagObject | undefined, attr: string, range: Range) {
-    const config = workspace.getConfiguration().get<ExtensionConfigutation>('naive-ui-intelligence')
+    const config = workspace.getConfiguration().get<ExtensionConfigutation>('naive-ui-intellisense')
     const language = config?.language || ExtensionLanguage.cn
 
     const kebabCaseTag = toKebabCase(tag?.text)
