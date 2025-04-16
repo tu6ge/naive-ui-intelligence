@@ -352,7 +352,32 @@ export const attributes: DocumentAttribute[] = [
 
 export const events: DocumentEvent[] = []
 
-export const slots: DocumentSlot[] = []
+export const slots: DocumentSlot[] = [
+  {
+    name: 'header',
+    description: '菜单头部区域的 slot',
+    params: '()',
+    version: '2.40.0'
+  },
+  {
+    name: 'action',
+    description: '菜单操作区域的 slot',
+    params: '()',
+    version: '2.22.0'
+  },
+  {
+    name: 'arrow',
+    description: '选择箭头 slot',
+    params: '()',
+    version: '2.30.4'
+  },
+  {
+    name: 'empty',
+    description: '菜单无数据时的 slot',
+    params: '()',
+    version: '2.22.0'
+  }
+]
 
 export const document: ElDocument = { attributes, events, slots }
 

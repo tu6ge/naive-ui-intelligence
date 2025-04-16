@@ -64,7 +64,32 @@ export const attributes: DocumentAttribute[] = [
 
 export const events: DocumentEvent[] = []
 
-export const slots: DocumentSlot[] = []
+export const slots: DocumentSlot[] = [
+  {
+    name: 'trigger',
+    description: '触发弹出信息的组件或元素',
+    params: '()',
+    version: ''
+  },
+  {
+    name: 'footer',
+    description: '弹出的 footer 内容',
+    params: '()',
+    version: '2.31.0'
+  },
+  {
+    name: 'header',
+    description: '弹出的 header 内容',
+    params: '()',
+    version: ''
+  },
+  {
+    name: 'default',
+    description: '弹出的内容',
+    params: '()',
+    version: ''
+  }
+]
 
 export const document: ElDocument = { attributes, events, slots }
 

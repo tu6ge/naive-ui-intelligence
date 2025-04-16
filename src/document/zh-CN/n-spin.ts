@@ -80,7 +80,26 @@ export const attributes: DocumentAttribute[] = [
 
 export const events: DocumentEvent[] = []
 
-export const slots: DocumentSlot[] = []
+export const slots: DocumentSlot[] = [
+  {
+    name: 'default',
+    description: '如果填入，Spin 会包裹填入的内容',
+    params: '()',
+    version: ''
+  },
+  {
+    name: 'description',
+    description: 'Spin 的文字信息',
+    params: '()',
+    version: ''
+  },
+  {
+    name: 'icon',
+    description: '自定义的加载图标',
+    params: '()',
+    version: ''
+  }
+]
 
 export const document: ElDocument = { attributes, events, slots }
 

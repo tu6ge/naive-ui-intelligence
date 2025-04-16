@@ -80,7 +80,50 @@ export const attributes: DocumentAttribute[] = [
 
 export const events: DocumentEvent[] = []
 
-export const slots: DocumentSlot[] = []
+export const slots: DocumentSlot[] = [
+  {
+    name: 'action',
+    description: '操作区域插槽',
+    params: '()',
+    version: ''
+  },
+  {
+    name: 'avatar',
+    description: '头像区域插槽',
+    params: '()',
+    version: ''
+  },
+  {
+    name: 'default',
+    description: '内容区域插槽',
+    params: '()',
+    version: ''
+  },
+  {
+    name: 'description',
+    description: '描述区域插槽',
+    params: '()',
+    version: ''
+  },
+  {
+    name: 'footer',
+    description: '尾部区域插槽',
+    params: '()',
+    version: ''
+  },
+  {
+    name: 'header-extra',
+    description: '头部附加区域插槽',
+    params: '()',
+    version: ''
+  },
+  {
+    name: 'header',
+    description: '头部区域插槽',
+    params: '()',
+    version: ''
+  }
+]
 
 export const document: ElDocument = { attributes, events, slots }
 

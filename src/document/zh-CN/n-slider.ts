@@ -152,7 +152,14 @@ export const attributes: DocumentAttribute[] = [
 
 export const events: DocumentEvent[] = []
 
-export const slots: DocumentSlot[] = []
+export const slots: DocumentSlot[] = [
+  {
+    name: 'thumb',
+    description: '滑块按钮',
+    params: '()',
+    version: '2.30.4'
+  }
+]
 
 export const document: ElDocument = { attributes, events, slots }
 

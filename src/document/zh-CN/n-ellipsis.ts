@@ -32,7 +32,20 @@ export const attributes: DocumentAttribute[] = [
 
 export const events: DocumentEvent[] = []
 
-export const slots: DocumentSlot[] = []
+export const slots: DocumentSlot[] = [
+  {
+    name: 'default',
+    description: '文本省略的内容',
+    params: '()',
+    version: ''
+  },
+  {
+    name: 'tooltip',
+    description: 'tooltip 的内容',
+    params: '()',
+    version: ''
+  }
+]
 
 export const document: ElDocument = { attributes, events, slots }
 

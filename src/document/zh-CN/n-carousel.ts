@@ -200,7 +200,26 @@ export const attributes: DocumentAttribute[] = [
 
 export const events: DocumentEvent[] = []
 
-export const slots: DocumentSlot[] = []
+export const slots: DocumentSlot[] = [
+  {
+    name: 'default',
+    description: '轮播的内容',
+    params: '()',
+    version: ''
+  },
+  {
+    name: 'arrow',
+    description: '箭头',
+    params: '(info: { total: number, currentIndex: number, to: (index: number) => void, prev: () => void, next: () => void })',
+    version: '2.24.0'
+  },
+  {
+    name: 'dots',
+    description: '指示点',
+    params: '(info: { total: number, currentIndex: number, to: (index: number) => void })',
+    version: '2.24.0'
+  }
+]
 
 export const document: ElDocument = { attributes, events, slots }
 

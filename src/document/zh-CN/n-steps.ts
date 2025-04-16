@@ -48,7 +48,26 @@ export const attributes: DocumentAttribute[] = [
 
 export const events: DocumentEvent[] = []
 
-export const slots: DocumentSlot[] = []
+export const slots: DocumentSlot[] = [
+  {
+    name: 'default',
+    description: '步骤条内容',
+    params: '()',
+    version: ''
+  },
+  {
+    name: 'finish-icon',
+    description: "'finish' 状态按钮配置",
+    params: '()',
+    version: ''
+  },
+  {
+    name: 'error-icon',
+    description: "'error' 状态按钮配置",
+    params: '()',
+    version: ''
+  }
+]
 
 export const document: ElDocument = { attributes, events, slots }
 

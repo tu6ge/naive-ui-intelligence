@@ -233,7 +233,32 @@ export const attributes: DocumentAttribute[] = [
 
 export const events: DocumentEvent[] = []
 
-export const slots: DocumentSlot[] = []
+export const slots: DocumentSlot[] = [
+  {
+    name: 'add-icon',
+    description: '增加按钮的图标',
+    params: '()',
+    version: '2.28.1'
+  },
+  {
+    name: 'minus-icon',
+    description: '减少按钮的图标',
+    params: '()',
+    version: '2.28.1'
+  },
+  {
+    name: 'prefix',
+    description: '输入框头部内容插槽',
+    params: '()',
+    version: ''
+  },
+  {
+    name: 'suffix',
+    description: '输入框尾部内容插槽',
+    params: '()',
+    version: ''
+  }
+]
 
 export const document: ElDocument = { attributes, events, slots }
 

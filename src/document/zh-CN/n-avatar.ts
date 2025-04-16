@@ -112,7 +112,26 @@ export const attributes: DocumentAttribute[] = [
 ]
 export const events: DocumentEvent[] = []
 
-export const slots: DocumentSlot[] = []
+export const slots: DocumentSlot[] = [
+  {
+    name: 'default',
+    description: '头像内填充的内容',
+    params: '()',
+    version: ''
+  },
+  {
+    name: 'fallback',
+    description: '加载失败的内容',
+    params: '()',
+    version: '2.33.4'
+  },
+  {
+    name: 'placeholder',
+    description: '图像没有完成加载时候的占位',
+    params: '()',
+    version: '2.31.0'
+  }
+]
 
 export const document: ElDocument = { attributes, events, slots }
 

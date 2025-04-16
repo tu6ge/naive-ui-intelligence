@@ -304,7 +304,50 @@ export const attributes: DocumentAttribute[] = [
 
 export const events: DocumentEvent[] = []
 
-export const slots: DocumentSlot[] = []
+export const slots: DocumentSlot[] = [
+  {
+    name: 'date-icon',
+    description: '日期输入框的图标',
+    params: '()',
+    version: '2.29.0'
+  },
+  {
+    name: 'footer',
+    description: '添加额外的页脚',
+    params: '()',
+    version: ''
+  },
+  {
+    name: 'next-month',
+    description: '日期面板的 `下一个` 图标',
+    params: '()',
+    version: '2.33.4'
+  },
+  {
+    name: 'next-year',
+    description: '日期面板的 `快速下一个` 图标',
+    params: '()',
+    version: '2.33.4'
+  },
+  {
+    name: 'prev-month',
+    description: '日期面板的 `上一个` 图标',
+    params: '()',
+    version: '2.33.4'
+  },
+  {
+    name: 'prev-year',
+    description: '日期面板的 `快速上一个` 图标',
+    params: '()',
+    version: '2.33.4'
+  },
+  {
+    name: 'separator',
+    description: '日期范围分隔符号',
+    params: '()',
+    version: '2.29.0'
+  }
+]
 
 export const document: ElDocument = { attributes, events, slots }
 

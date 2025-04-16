@@ -72,7 +72,26 @@ export const attributes: DocumentAttribute[] = [
 
 export const events: DocumentEvent[] = []
 
-export const slots: DocumentSlot[] = []
+export const slots: DocumentSlot[] = [
+  {
+    name: 'arrow',
+    description: '折叠面板的自定义图标',
+    params: '(props: { collapsed: boolean })',
+    version: ''
+  },
+  {
+    name: 'default',
+    description: '折叠面板的内容',
+    params: '()',
+    version: ''
+  },
+  {
+    name: 'header-extra',
+    description: '折叠面板节点头部的额外内容',
+    params: '(props: { collapsed: boolean })',
+    version: ''
+  }
+]
 
 export const document: ElDocument = { attributes, events, slots }
 

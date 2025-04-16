@@ -216,7 +216,14 @@ export const attributes: DocumentAttribute[] = [
 
 export const events: DocumentEvent[] = []
 
-export const slots: DocumentSlot[] = []
+export const slots: DocumentSlot[] = [
+  {
+    name: 'default',
+    description: '水印覆盖的内容',
+    params: '()',
+    version: '2.25.3'
+  }
+]
 
 export const document: ElDocument = { attributes, events, slots }
 

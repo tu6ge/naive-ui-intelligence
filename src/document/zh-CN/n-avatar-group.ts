@@ -48,7 +48,26 @@ export const attributes: DocumentAttribute[] = [
 
 export const events: DocumentEvent[] = []
 
-export const slots: DocumentSlot[] = []
+export const slots: DocumentSlot[] = [
+  {
+    name: 'avatar',
+    description: '头像组头像',
+    params: '(info: { option: { src: string } })',
+    version: ''
+  },
+  {
+    name: 'default',
+    description: '头像组内填充的内容',
+    params: '()',
+    version: ''
+  },
+  {
+    name: 'rest',
+    description: '头像组溢出容器',
+    params: '(info: { options: Array<{ src: string }>, rest: number })',
+    version: ''
+  }
+]
 
 export const document: ElDocument = { attributes, events, slots }
 

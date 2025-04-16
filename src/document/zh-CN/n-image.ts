@@ -145,7 +145,20 @@ export const attributes: DocumentAttribute[] = [
 
 export const events: DocumentEvent[] = []
 
-export const slots: DocumentSlot[] = []
+export const slots: DocumentSlot[] = [
+  {
+    name: 'placeholder',
+    description: '图像没有加载成功时候的占位',
+    params: '()',
+    version: '2.30.5'
+  },
+  {
+    name: 'error',
+    description: '图像加载失败时候的占位',
+    params: '()',
+    version: '2.40.2'
+  }
+]
 
 export const document: ElDocument = { attributes, events, slots }
 

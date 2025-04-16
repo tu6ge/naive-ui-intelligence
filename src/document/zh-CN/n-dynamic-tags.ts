@@ -144,7 +144,20 @@ export const attributes: DocumentAttribute[] = [
 
 export const events: DocumentEvent[] = []
 
-export const slots: DocumentSlot[] = []
+export const slots: DocumentSlot[] = [
+  {
+    name: 'input',
+    description: '自定义输入元素，由用户填充',
+    params: '(info: { submit: (value: any) => void, deactivate: () => void })',
+    version: '2.26.2'
+  },
+  {
+    name: 'trigger',
+    description: '触发输入标签的组件或元素',
+    params: '(info: { activate: () => void, disabled: boolean })',
+    version: ''
+  }
+]
 
 export const document: ElDocument = { attributes, events, slots }
 

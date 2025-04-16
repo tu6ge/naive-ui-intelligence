@@ -208,7 +208,44 @@ export const attributes: DocumentAttribute[] = [
 
 export const events: DocumentEvent[] = []
 
-export const slots: DocumentSlot[] = []
+export const slots: DocumentSlot[] = [
+  {
+    name: 'goto',
+    description: '快速跳转的文本内容',
+    params: '()',
+    version: '2.27.0'
+  },
+  {
+    name: 'label',
+    description: '每一项的内容',
+    params: '同 `PaginationRenderLabel` 参数',
+    version: '2.24.0'
+  },
+  {
+    name: 'next',
+    description: '下一页',
+    params: '(info: PaginationInfo)',
+    version: ''
+  },
+  {
+    name: 'prev',
+    description: '上一页',
+    params: '(info: PaginationInfo)',
+    version: ''
+  },
+  {
+    name: 'prefix',
+    description: '分页前缀',
+    params: '(info: PaginationInfo)',
+    version: ''
+  },
+  {
+    name: 'suffix',
+    description: '分页后缀',
+    params: '(info: PaginationInfo)',
+    version: ''
+  }
+]
 
 export const document: ElDocument = { attributes, events, slots }
 

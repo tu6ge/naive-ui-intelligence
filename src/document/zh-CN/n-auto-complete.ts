@@ -200,7 +200,32 @@ export const attributes: DocumentAttribute[] = [
 
 export const events: DocumentEvent[] = []
 
-export const slots: DocumentSlot[] = []
+export const slots: DocumentSlot[] = [
+  {
+    name: 'default',
+    description: '自定义输入元素，由用户填充',
+    params: '(options: { handleInput: (value: string) => void, handleFocus: function, handleBlur: function, value: string, theme: string | null })',
+    version: ''
+  },
+  {
+    name: 'empty',
+    description: '菜单为空时候的内容',
+    params: '()',
+    version: '2.37.1'
+  },
+  {
+    name: 'prefix',
+    description: '输入框头部内容',
+    params: '()',
+    version: ''
+  },
+  {
+    name: 'suffix',
+    description: '输入框尾部内容',
+    params: '()',
+    version: ''
+  }
+]
 
 export const document: ElDocument = { attributes, events, slots }
 

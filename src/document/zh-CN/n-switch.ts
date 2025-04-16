@@ -96,7 +96,38 @@ export const attributes: DocumentAttribute[] = [
 
 export const events: DocumentEvent[] = []
 
-export const slots: DocumentSlot[] = []
+export const slots: DocumentSlot[] = [
+  {
+    name: 'checked',
+    description: '开关激活时的内容',
+    params: '()',
+    version: ''
+  },
+  {
+    name: 'checked-icon',
+    description: '开关按钮选中时的图标',
+    params: '()',
+    version: '2.25.3'
+  },
+  {
+    name: 'icon',
+    description: '开关按钮的图标',
+    params: '()',
+    version: '2.25.3'
+  },
+  {
+    name: 'unchecked',
+    description: '开关关闭时的内容',
+    params: '()',
+    version: ''
+  },
+  {
+    name: 'unchecked-icon',
+    description: '开关按钮未选中时的图标',
+    params: '()',
+    version: '2.25.3'
+  }
+]
 
 export const document: ElDocument = { attributes, events, slots }
 

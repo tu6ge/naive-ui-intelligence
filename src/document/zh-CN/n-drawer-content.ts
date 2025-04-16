@@ -104,7 +104,26 @@ export const attributes: DocumentAttribute[] = [
 
 export const events: DocumentEvent[] = []
 
-export const slots: DocumentSlot[] = []
+export const slots: DocumentSlot[] = [
+  {
+    name: 'default',
+    description: '抽屉主体的内容',
+    params: '()',
+    version: ''
+  },
+  {
+    name: 'footer',
+    description: '抽屉主体 footer 的内容',
+    params: '()',
+    version: ''
+  },
+  {
+    name: 'header',
+    description: '抽屉主体 header 的内容',
+    params: '()',
+    version: ''
+  }
+]
 
 export const document: ElDocument = { attributes, events, slots }
 

@@ -32,7 +32,32 @@ export const attributes: DocumentAttribute[] = [
 
 export const events: DocumentEvent[] = []
 
-export const slots: DocumentSlot[] = []
+export const slots: DocumentSlot[] = [
+  {
+    name: 'default',
+    description: '值',
+    params: '()',
+    version: ''
+  },
+  {
+    name: 'label',
+    description: '标签',
+    params: '()',
+    version: ''
+  },
+  {
+    name: 'prefix',
+    description: '值的前缀',
+    params: '()',
+    version: ''
+  },
+  {
+    name: 'suffix',
+    description: '值的后缀',
+    params: '()',
+    version: ''
+  }
+]
 
 export const document: ElDocument = { attributes, events, slots }
 

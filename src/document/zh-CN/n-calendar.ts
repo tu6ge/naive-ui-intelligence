@@ -48,7 +48,20 @@ export const attributes: DocumentAttribute[] = [
 
 export const events: DocumentEvent[] = []
 
-export const slots: DocumentSlot[] = []
+export const slots: DocumentSlot[] = [
+  {
+    name: 'default',
+    description: '每个日期中渲染的内容',
+    params: '(props: { year: number, month: number, date: number })',
+    version: ''
+  },
+  {
+    name: 'header',
+    description: '日历的标题，`month` 从 1 开始',
+    params: '(props: { year: number, month: number })',
+    version: '2.29.1'
+  }
+]
 
 export const document: ElDocument = { attributes, events, slots }
 

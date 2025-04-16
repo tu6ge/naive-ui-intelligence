@@ -368,7 +368,20 @@ export const attributes: DocumentAttribute[] = [
 
 export const events: DocumentEvent[] = []
 
-export const slots: DocumentSlot[] = []
+export const slots: DocumentSlot[] = [
+  {
+    name: 'empty',
+    description: '表格数据为空时的展示',
+    params: '()',
+    version: ''
+  },
+  {
+    name: 'loading',
+    description: '表格 loading 时的展示',
+    params: '()',
+    version: '2.34.0'
+  }
+]
 
 export const document: ElDocument = { attributes, events, slots }
 

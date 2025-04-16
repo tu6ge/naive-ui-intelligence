@@ -120,7 +120,32 @@ export const attributes: DocumentAttribute[] = [
 
 export const events: DocumentEvent[] = []
 
-export const slots: DocumentSlot[] = []
+export const slots: DocumentSlot[] = [
+  {
+    name: 'action',
+    description: '自定义操作，其中 `value` 为该项对应的数组值，`index` 为该项对应的数组索引',
+    params: "(options: { value: any, index: number, create: (index: number) => void, remove: (index: number) => void, move: (type: 'up' | 'down', index: number) => void })",
+    version: '2.34.4'
+  },
+  {
+    name: 'default',
+    description: '每一项的渲染方式，其中 `value` 为该项对应的数组值，`index` 为该项对应的数组索引',
+    params: '(options: { value: any, index: number })',
+    version: ''
+  },
+  {
+    name: 'create-button-default',
+    description: '新建项按钮的内容',
+    params: '()',
+    version: '2.25.0'
+  },
+  {
+    name: 'create-button-icon',
+    description: '新建项按钮的图标',
+    params: '()',
+    version: '2.25.0'
+  }
+]
 
 export const document: ElDocument = { attributes, events, slots }
 

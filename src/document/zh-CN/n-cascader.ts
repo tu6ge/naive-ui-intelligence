@@ -328,7 +328,32 @@ export const attributes: DocumentAttribute[] = [
 
 export const events: DocumentEvent[] = []
 
-export const slots: DocumentSlot[] = []
+export const slots: DocumentSlot[] = [
+  {
+    name: 'action',
+    description: '级联菜单中显示的 action 填充内容',
+    params: '()',
+    version: ''
+  },
+  {
+    name: 'arrow',
+    description: '箭头的 slot',
+    params: '()',
+    version: '2.32.2'
+  },
+  {
+    name: 'empty',
+    description: '级联菜单无数据时的 slot',
+    params: '()',
+    version: '2.22.0'
+  },
+  {
+    name: 'not-found',
+    description: '搜索不到数据时候的 slot',
+    params: '()',
+    version: '2.34.0'
+  }
+]
 
 export const document: ElDocument = { attributes, events, slots }
 

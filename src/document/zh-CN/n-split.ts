@@ -136,7 +136,26 @@ export const attributes: DocumentAttribute[] = [
 
 export const events: DocumentEvent[] = []
 
-export const slots: DocumentSlot[] = []
+export const slots: DocumentSlot[] = [
+  {
+    name: '1',
+    description: '第一个面板内容',
+    params: '()',
+    version: '2.36.0'
+  },
+  {
+    name: '2',
+    description: '第二个面板内容',
+    params: '()',
+    version: '2.36.0'
+  },
+  {
+    name: 'resize-trigger',
+    description: '分割条内容',
+    params: '()',
+    version: '2.36.0'
+  }
+]
 
 export const document: ElDocument = { attributes, events, slots }
 
