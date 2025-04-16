@@ -167,24 +167,24 @@ export class HoverDocumentGenerator {
     if (slots.length) {
       if (language === 'zh-CN') {
         markdownString.appendMarkdown(`### ${tag} 插槽\r`)
-        markdownString.appendMarkdown('| 插槽 | 说明 |\r')
+        markdownString.appendMarkdown('| 插槽 | 说明 | 参数 | 版本 |\r')
       } else {
         markdownString.appendMarkdown(`### ${tag} Slot\r`)
-        markdownString.appendMarkdown('| Slot | Description |\r')
+        markdownString.appendMarkdown('| Slot | Description | Params | Version |\r')
       }
-      markdownString.appendMarkdown('|---|---|\r')
+      markdownString.appendMarkdown('|---|---|---|---|\r')
     }
     if (attribute.length === 0) {
       // 属性 和标签一样 显示全部
       slots.forEach((row: DocumentSlot) => {
-        markdownString.appendMarkdown(`|${row.name}|${row.description}|\r`)
+        markdownString.appendMarkdown(`|${row.name}|${row.description}|\`${row.params}\`|${row.version}|\r`)
         isUndefined = false
       })
     } else {
       // 属性和标签不一样 显示标签下的某个属性的信息
       const row = slots.find((row: DocumentSlot) => row.name === attribute)
       if (row) {
-        markdownString.appendMarkdown(`|${row.name}|${row.description}|\r`)
+        markdownString.appendMarkdown(`|${row.name}|${row.description}|\`${row.params}\`|${row.version}|\r`)
         isUndefined = false
       }
     }
