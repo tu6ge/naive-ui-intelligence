@@ -257,7 +257,36 @@ export const attributes: DocumentAttribute[] = [
 
 export const events: DocumentEvent[] = []
 
-export const slots: DocumentSlot[] = []
+export const slots: DocumentSlot[] = [
+  {
+    name: 'clear-icon',
+    description: '自定义清除图标'
+  },
+  {
+    name: 'count',
+    description: '字数统计'
+  },
+  {
+    name: 'password-invisible-icon',
+    description: '	密码关闭时的密码开关图标'
+  },
+  {
+    name: 'password-visible-icon',
+    description: '密码显示时的密码开关图标'
+  },
+  {
+    name: 'prefix',
+    description: '输入框头部内容'
+  },
+  {
+    name: 'separator',
+    description: '成对输入框之间分隔符，仅 `pair` = true 生效且优先级高于 separator 属性'
+  },
+  {
+    name: 'suffix',
+    description: '输入框尾部内容'
+  }
+]
 
 export const document: ElDocument = { attributes, events, slots }
 
