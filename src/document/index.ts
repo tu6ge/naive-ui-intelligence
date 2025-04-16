@@ -62,6 +62,10 @@ export interface DocumentSlot {
   name: string
   // 说明
   description: string
+  // 参数
+  params: string
+  // 版本
+  version: string
 }
 
 /**

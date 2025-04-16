@@ -260,31 +260,45 @@ export const events: DocumentEvent[] = []
 export const slots: DocumentSlot[] = [
   {
     name: 'clear-icon',
-    description: '自定义清除图标'
+    description: '自定义清除图标',
+    params: '()',
+    version: '2.29.0'
   },
   {
     name: 'count',
-    description: '字数统计'
+    description: '字数统计',
+    params: '(props: { value: string })',
+    version: ''
   },
   {
     name: 'password-invisible-icon',
-    description: '	密码关闭时的密码开关图标'
+    description: '	密码关闭时的密码开关图标',
+    params: '()',
+    version: '2.27.0'
   },
   {
     name: 'password-visible-icon',
-    description: '密码显示时的密码开关图标'
+    description: '密码显示时的密码开关图标',
+    params: '()',
+    version: '2.27.0'
   },
   {
     name: 'prefix',
-    description: '输入框头部内容'
+    description: '输入框头部内容',
+    params: '()',
+    version: ''
   },
   {
     name: 'separator',
-    description: '成对输入框之间分隔符，仅 `pair` = true 生效且优先级高于 separator 属性'
+    description: '成对输入框之间分隔符，仅 `pair` = true 生效且优先级高于 separator 属性',
+    params: '()',
+    version: ''
   },
   {
     name: 'suffix',
-    description: '输入框尾部内容'
+    description: '输入框尾部内容',
+    params: '()',
+    version: ''
   }
 ]
 
