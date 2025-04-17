@@ -163,6 +163,30 @@ export const attributes: DocumentAttribute[] = [
     description: '表单的验证状态。不设为 `undefined`时，会覆盖规则验证的结果',
     version: '',
     value: 'error/success/warning'
+  },
+  {
+    name: 'offset',
+    type: 'number | ResponsiveDescription',
+    default: '0',
+    description: '栅格左侧的间隔格数',
+    value: '',
+    version: ''
+  },
+  {
+    name: 'span',
+    type: 'number | ResponsiveDescription',
+    default: '1',
+    description: '栅格占据的列数，为 0 的时候会隐藏',
+    value: '',
+    version: ''
+  },
+  {
+    name: 'suffix',
+    type: 'boolean',
+    default: 'false',
+    description: '栅格后缀',
+    value: '',
+    version: ''
   }
 ]
 
