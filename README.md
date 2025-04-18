@@ -5,7 +5,7 @@
 
 > Naive UI Intelligence is a VS Code extension for Naive-UI.
 
-- Support 97 components of Naive-ui
+- Support **121** components of Naive-ui
 - Support all props of components
 
 
