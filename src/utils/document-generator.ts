@@ -28,7 +28,6 @@ export class HoverDocumentGenerator {
     if (document.name) {
       name = document.name
     }
-    console.log('component name:', name)
     markdownString.appendMarkdown(`[文档](https://www.naiveui.com/zh-CN/light/components/${name})\n`)
 
     const attributes = document.attributes || [] // 取得属性列表
