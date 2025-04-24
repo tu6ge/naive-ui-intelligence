@@ -138,6 +138,6 @@ export const events: DocumentEvent[] = []
 
 export const slots: DocumentSlot[] = []
 // z
-export const document: ElDocument = { attributes, events, slots }
+export const document: ElDocument = { attributes, events, slots, name: 'data-table' }
 
 export default document

@@ -180,6 +180,9 @@ export class ElementHoverProvier implements HoverProvider {
       const tagDocument = document[tag]
       const hoverMarkdownStrings: MarkdownString[] = []
       Object.keys(tagDocument).forEach((key: string) => {
+        if (key === 'name') {
+          return
+        }
         const hoverMarkdownString: MarkdownString = HoverDocumentGenerator.getInstance().generate<ElDocument>(tagDocument, key, tag, attr, language)
         if (hoverMarkdownString) {
           hoverMarkdownStrings.push(hoverMarkdownString)

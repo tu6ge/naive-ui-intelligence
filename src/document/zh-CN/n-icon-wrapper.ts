@@ -42,6 +42,6 @@ export const events: DocumentEvent[] = []
 
 export const slots: DocumentSlot[] = []
 
-export const document: ElDocument = { attributes, events, slots }
+export const document: ElDocument = { attributes, events, slots, name: 'icon' }
 
 export default document

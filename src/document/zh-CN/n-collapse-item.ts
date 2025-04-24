@@ -67,6 +67,6 @@ export const slots: DocumentSlot[] = [
   }
 ]
 
-export const document: ElDocument = { attributes, events, slots }
+export const document: ElDocument = { attributes, events, slots, name: 'collapse' }
 
 export default document

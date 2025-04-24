@@ -23,6 +23,14 @@ export class HoverDocumentGenerator {
   private generateAttribute<T extends BaseDocument>(document: T, tag: string, attribute: string, language: string): MarkdownString {
     let isUndefined: boolean = true // 标记是否具有文档
     let markdownString: MarkdownString = new MarkdownString('', true)
+
+    let name = tag.replace(/n-/, '')
+    if (document.name) {
+      name = document.name
+    }
+    console.log('component name:', name)
+    markdownString.appendMarkdown(`[文档](https://www.naiveui.com/zh-CN/light/components/${name})\n`)
+
     const attributes = document.attributes || [] // 取得属性列表
     if (attributes.length) {
       // 生成表头
@@ -53,6 +61,7 @@ export class HoverDocumentGenerator {
         isUndefined = false
       }
     }
+    //console.log(markdownString.value);
     if (isUndefined) {
       markdownString = new MarkdownString('', true)
     }
