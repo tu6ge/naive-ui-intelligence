@@ -5,6 +5,7 @@ import { ElementHoverProvier } from './hover-tips/element-hover-provider'
 import { ElementCompletionItemProvider } from './completion/element-completion-item-povider'
 import { SlotCompletionItems } from './completion/slot-completion-items'
 import { PascalCaseCompletionItem } from './completion/PascalCaseCompletionItem'
+import { PascalCaseSlotCompletionItems } from './completion/PascalCaseSlotCompletionItems'
 
 export function activate(context: ExtensionContext): void {
   console.log('extension "naive-ui" is now active!')
@@ -54,6 +55,18 @@ export function activate(context: ExtensionContext): void {
       new PascalCaseCompletionItem(),
       'N',
       ' '
+    )
+  )
+  context.subscriptions.push(
+    vscode.languages.registerCompletionItemProvider(
+      [
+        {
+          language: 'vue',
+          scheme: 'file'
+        }
+      ],
+      new PascalCaseSlotCompletionItems(),
+      '#'
     )
   )
 
