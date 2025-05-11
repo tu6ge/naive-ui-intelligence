@@ -25,10 +25,18 @@ export class ElementCompletionItemProvider implements CompletionItemProvider<Com
   private tagReg: RegExp = /<([\w-]+)\s*/g
   private attrReg: RegExp = /(?:\(|\s*)([\w-]+)=['"][^'"]*/
   private tagStartReg: RegExp = /<([\w-]*)$/
-  private pugTagStartReg: RegExp = /^\s*[\w-]*$/
+  private pugTagReg: RegExp = /^[\s\t]*n-([\w-]+)/gm
+  private pugTagStartReg: RegExp = /^[\s\t]*n-?$/m // 新增pug标签开始正则
   private size!: number
   private quotes!: string
 
+  /**
+   * 判断当前文档是否使用的是 Pug 模板
+   */
+  isPugTemplate(): boolean {
+    const text = this._document.getText()
+    return /<template\s+lang=["']pug["']/.test(text)
+  }
   /**
    * 获取前置标签
    */
@@ -89,15 +97,30 @@ export class ElementCompletionItemProvider implements CompletionItemProvider<Com
     let match: RegExpExecArray | null
     let arr: TagObject[] = []
 
-    if (/<\/?[-\w]+[^<>]*>[\s\w]*<?\s*[\w-]*$/.test(txt) || (this._position.line === line && (/^\s*[^<]+\s*>[^</>]*$/.test(txt) || /[^<>]*<$/.test(txt[txt.length - 1])))) {
-      return 'break'
+    // 对于 Pug 使用不同的逻辑
+    if (this.isPugTemplate()) {
+      // Pug 格式的匹配逻辑
+      const pugReg = /^\s*n-([\w-]+)/
+      match = pugReg.exec(txt)
+      if (match) {
+        arr.push({
+          text: `n-${match[1]}`,
+          offset: this._document.offsetAt(new Position(line, match.index))
+        })
+      }
+    } else {
+      // 原有的 HTML 格式匹配逻辑
+      if (/<\/?[-\w]+[^<>]*>[\s\w]*<?\s*[\w-]*$/.test(txt) || (this._position.line === line && (/^\s*[^<]+\s*>[^</>]*$/.test(txt) || /[^<>]*<$/.test(txt[txt.length - 1])))) {
+        return 'break'
+      }
+      while ((match = reg.exec(txt))) {
+        arr.push({
+          text: match[1],
+          offset: this._document.offsetAt(new Position(line, match.index))
+        })
+      }
     }
-    while ((match = reg.exec(txt))) {
-      arr.push({
-        text: match[1],
-        offset: this._document.offsetAt(new Position(line, match.index))
-      })
-    }
+
     return arr.pop()
   }
 
@@ -127,15 +150,20 @@ export class ElementCompletionItemProvider implements CompletionItemProvider<Com
    */
   isAttrStart(tag: TagObject | undefined) {
     const preText = this.getTextBeforePosition(this._position)
+    if (this.isPugTemplate()) {
+      return tag && (/[\s\t][\w-]*$/.test(preText) || /\([\w-]*$/.test(preText))
+    }
     return tag && / :?[\w-]*$/.test(preText)
   }
-
   /**
    * 是否为方法的开始
    * @param tag 标签
    */
   isEventStart(tag: TagObject | undefined) {
     const preText = this.getTextBeforePosition(this._position)
+    if (this.isPugTemplate()) {
+      return tag && /[\s\t]@[\w-]*$/.test(preText)
+    }
     return tag && / @[\w-]*$/.test(preText)
   }
 
@@ -226,22 +254,48 @@ export class ElementCompletionItemProvider implements CompletionItemProvider<Com
     const language = config?.language || ExtensionLanguage.cn
     const document: Record<string, any> = localDocument[language]
     const preText = this.getTextBeforePosition(this._position)
-    const prefix = preText.replace(/.*[\s@:]/g, '')
-    const attributes: DocumentAttribute[] = document[tag].attributes || []
-    const likeTag = attributes.filter((attribute: DocumentAttribute) => attribute.name.includes(prefix))
-    const start = Math.max(preText.lastIndexOf(' '), preText.lastIndexOf(':')) + 1
-    const end = start + prefix.length
+    const isPug = this.isPugTemplate()
+
+    let prefix, start, end, range
+
+    if (isPug) {
+      // Pug 属性前缀提取
+      prefix = preText.match(/[\s\t(]([^=\s\t]*)$/)?.[1] || ''
+      start = preText.lastIndexOf(prefix)
+      end = start + prefix.length
+    } else {
+      // HTML 属性前缀提取
+      prefix = preText.replace(/.*[\s@:]/g, '')
+      start = Math.max(preText.lastIndexOf(' '), preText.lastIndexOf(':')) + 1
+      end = start + prefix.length
+    }
+
     const startPos = new Position(this._position.line, start)
     const endPos = new Position(this._position.line, end)
-    const range = new Range(startPos, endPos)
+    range = new Range(startPos, endPos)
+
+    const attributes: DocumentAttribute[] = document[tag]?.attributes || []
+    const likeTag = attributes.filter((attribute: DocumentAttribute) => attribute.name.includes(prefix))
+
     likeTag.forEach((attribute: DocumentAttribute) => {
-      let insertText = new SnippetString().appendText(attribute.name)
-      if (attribute.value.indexOf('/') > -1) {
-        const values = attribute.value.split('/')
-        insertText = new SnippetString()
-          .appendText(attribute.name + '="')
-          .appendChoice(values)
-          .appendText('"')
+      let insertText
+
+      if (isPug) {
+        // Pug 属性插入格式
+        if (attribute.value.indexOf('/') > -1) {
+          const values = attribute.value.split('/')
+          insertText = new SnippetString().appendText(`${attribute.name}="`).appendChoice(values).appendText('"')
+        } else {
+          insertText = new SnippetString().appendText(attribute.name)
+        }
+      } else {
+        // HTML 属性插入格式
+        if (attribute.value.indexOf('/') > -1) {
+          const values = attribute.value.split('/')
+          insertText = new SnippetString().appendText(`${attribute.name}="`).appendChoice(values).appendText('"')
+        } else {
+          insertText = new SnippetString().appendText(attribute.name)
+        }
       }
 
       completionItems.push({
@@ -254,17 +308,19 @@ export class ElementCompletionItemProvider implements CompletionItemProvider<Com
         range
       })
     })
+
     return completionItems
   }
-
   /**
    * 是否位标签的开始
    */
   isTagStart(): boolean {
     let txt = this.getTextBeforePosition(this._position)
+    if (this.isPugTemplate()) {
+      return this.pugTagStartReg.test(txt)
+    }
     return this.tagStartReg.test(txt)
   }
-
   /**
    * 获取标签提示
    */
@@ -274,24 +330,55 @@ export class ElementCompletionItemProvider implements CompletionItemProvider<Com
     const language = config?.language || ExtensionLanguage.cn
     const preText = this.getTextBeforePosition(this._position)
     const document: Record<string, any> = localDocument[language]
-    const start = preText.lastIndexOf('<') + 1
-    const end = preText.length - start + 1
-    const startPos = new Position(this._position.line, start)
-    const endPos = new Position(this._position.line, end)
-    const range = new Range(startPos, endPos)
+    const isPug = this.isPugTemplate()
+
+    let start, end, range
+
+    if (isPug) {
+      // Pug 模板的处理逻辑
+      start = preText.lastIndexOf('n-')
+      if (start === -1) {
+        start = preText.length
+      }
+      end = preText.length
+      const startPos = new Position(this._position.line, start)
+      const endPos = new Position(this._position.line, end)
+      range = new Range(startPos, endPos)
+    } else {
+      // 原有的 HTML 处理逻辑
+      start = preText.lastIndexOf('<') + 1
+      end = preText.length - start + 1
+      const startPos = new Position(this._position.line, start)
+      const endPos = new Position(this._position.line, end)
+      range = new Range(startPos, endPos)
+    }
+
     Object.keys(document).forEach((key) => {
-      completionItems.push({
-        label: `${key}`,
-        sortText: `0${key}`,
-        detail: 'NaiveUI Tag',
-        kind: CompletionItemKind.Keyword,
-        insertText: new SnippetString().appendText(`${key}`).appendTabstop().appendText('>').appendTabstop().appendText(`</${key}>`),
-        range
-      })
+      if (isPug) {
+        // Pug 格式的组件标签插入
+        completionItems.push({
+          label: `${key}`,
+          sortText: `0${key}`,
+          detail: 'NaiveUI Tag (Pug)',
+          kind: CompletionItemKind.Keyword,
+          insertText: new SnippetString().appendText(`${key}`).appendTabstop(),
+          range
+        })
+      } else {
+        // 原有的 HTML 插入逻辑
+        completionItems.push({
+          label: `${key}`,
+          sortText: `0${key}`,
+          detail: 'NaiveUI Tag',
+          kind: CompletionItemKind.Keyword,
+          insertText: new SnippetString().appendText(`${key}`).appendTabstop().appendText('>').appendTabstop().appendText(`</${key}>`),
+          range
+        })
+      }
     })
+
     return completionItems
   }
-
   /**
    * 提供自动完成提示
    *
@@ -305,11 +392,22 @@ export class ElementCompletionItemProvider implements CompletionItemProvider<Com
     this._position = position
     this.token = token
 
+    // 对 Pug 模板中 n- 前缀的特殊处理
+    if (this.isPugTemplate()) {
+      const lineText = document.lineAt(position.line).text
+      if (/^\s*n-$/.test(lineText.substring(0, position.character))) {
+        return this.getTagCompletionItems('')
+      }
+    }
+
     let tag: TagObject | undefined = this.getPreTag()
     let attr = this.getPreAttr()
 
     if (!tag || !/^n/.test(tag.text || '')) {
-      // 如果不是element的标签(E|el开头) 则返回 null 表示没有hover
+      // 如果不是 naive-ui 的标签(n 开头) 则返回 null
+      if (this.isTagStart()) {
+        return this.getTagCompletionItems('')
+      }
       return null
     } else if (this.isAttrValueStart(tag, attr)) {
       // 如果是属性值的开始
