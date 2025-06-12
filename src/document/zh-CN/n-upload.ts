@@ -363,6 +363,14 @@ export const attributes: DocumentAttribute[] = [
     value: '',
     description: '当 file-list 改变时触发的回调函数',
     version: ''
+  },
+  {
+    name: 'custom-download',
+    type: '(file: FileInfo) => void',
+    default: 'undefined',
+    value: '',
+    description: '自定义下载方法',
+    version: '2.41.1'
   }
 ]
 

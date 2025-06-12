@@ -347,6 +347,14 @@ export const attributes: DocumentAttribute[] = [
     value: '',
     description: '组件的宽度',
     version: '2.22.0'
+  },
+  {
+    name: 'indent',
+    type: 'number',
+    default: '24',
+    value: '',
+    description: '树的每一级缩进的大小',
+    version: '2.41.1'
   }
 ]
 

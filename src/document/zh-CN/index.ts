@@ -59,6 +59,7 @@ import nimage from './n-image'
 import nimagegroup from './n-image-group'
 import ninfinitescroll from './n-infinite-scroll'
 import ninput from './n-input'
+import ninputotp from './n-input-otp'
 import ninputnumber from './n-input-number'
 import nlayout from './n-layout'
 import nlayoutcontent from './n-layout-content'
@@ -183,6 +184,7 @@ export default {
   'n-infinite-scroll': ninfinitescroll,
   'n-input': ninput,
   'n-input-number': ninputnumber,
+  'n-input-otp': ninputotp,
   'n-layout': nlayout,
   'n-layout-content': nlayoutcontent,
   'n-layout-footer': nlayoutfooter,
